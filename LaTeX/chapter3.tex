@@ -1,88 +1,34 @@
 \chapter{Mechanisms of Coronal Dimming}
 \label{chaptermechanisms}
 
-This sample document illustrates how to use the
-{\tt thesis} class, originally written by John P. Weiss.
-Some requirements of the Graduate School are written
-into that file; page size, line spacing, appropriate
-placement of captions for tables and figures, etc.
-Revisions by Hongcheng Ni make it possible to use the
-(optional)
-\verb2\usepackage{hyperref}2 command to enable
-internal hyperlinks in the final PDF document.
-Other tasks of conforming to the requirements are
-left to other existing \LaTeX{} packages.
-For example, a common problem is to insert graphics ---
-figures and tables --- into the body of the thesis.  For
-this one should use the {\tt graphicx} package, which is
-part of the standard \TeX{} distribution.  Likewise, the
-Grad School specs say that a large table may be displayed
-in landscape mode at reduced size, but its caption must
-also be in rotated position, in the same font and size as
-the normal text in the body of the thesis.  To accomplish
-this, the user must invoke the {\tt rotating} package,
-available online.
 
 
-Figure \ref{xfigDiagram} shows an image from a PDF file
-imported into this document
-using the \verb2graphicx2 package.
-The command \verb2\usepackage{graphicx}2, which appears
-near the very top of the main \LaTeX{} file, reads in
-this package which defines the
-\verb2\includegraphics{}2 macro.
+This chapter details the physics of coronal dimming. This first original contribution to the field shows that there are theoretically many physical processes that can lead to an uncareful observer identifying "dimming", which may have little to do with coronal mass ejection (CME). Traditionally, the term "coronal dimming" has been assumed to refer to the void left in the corona after a CME departs. This is one cause of a transient hole in the corona, and is of the greatest concern to space weather forecasters. Typically, a single dimming-sensitive wavelength or band will be observed and analyzed. However, changing temperatures, common during solar eruptive events, cause ionization fraction shifting, resulting in some emissions dimming while others brighten. Additionally, dark material (e.g., a filament) can pass between a bright region (e.g., flaring loops) and the observer, causing a transient dip in emission. Third, solar eruptive events sometimes have associated waves that propagate across the solar disk. These waves are observed as narrow bright fronts with a trailing dark region. The trailing dark region is another way to achieve a transient dimming of emission. Next, there are two ways that Doppler effects can cause transient dips in emission. The first is called Doppler dimming and results from fast moving plasma being sufficiently Doppler-shifted to reduce resonant fluorescence from the solar emission line sources; a phenomenon which is independent of the observation angle. The second occurs if eruptive plasma is moving fast enough in the line-of-sight to shift its emissions outside the bandpass of an observing instrument, which we have named "bandpass shift dimming". The physics, instrument effects, and mitigation strategies for each of these types of theoretically observable dimming are summarized in Table \ref{tablesummary} and are discussed in detail in the sections that follow. 
 
-
-\begin{figure}[htbp]
-	\caption[Cylinder and measurements]{
-	This diagram of a cylinder and various
-	measurements and quantities was actually
-	made using {\bf xfig}, a freeware
-	drawing program for Unix systems.
-	Diagrams can be exported directly to PDF
-	files, the preferred format for
-	vector graphics.  Vector graphics can
-	be magnified indefinitely without degradation,
-	whereas bitmap images (JPG and PNG)
-	must be pretty high-resolution if you don't
-	want them looking all pixellated when
-	magnified.
-	}
+\begin{table}[!htb]
+    \caption{Summary of physical processes that can manifest as observed dimming}
     \begin{center}
-	\includegraphics[width=100mm]{figs/cyl.pdf}
-    \end{center}
-\label{xfigDiagram}
-\end{figure}
+    \begin{tabular}{|p{2.5cm}|p{4cm}|p{4cm}|p{4cm}|} \hline
+	Short Name & Physical Process & EVE Observational Identifiers & AIA Observational Identifiers \\ \hline \hline
+	Mass loss (Fig. \ref{figuremassloss}) & Ejection of emitting plasma from corona & Simultaneous intensity decrease in multiple coronal emission lines, with percentage decrease indicative of percentage mass lost & Area over and near the erupting active region (AR) darkens \\ \hline
+	
+	Thermal (Fig. \ref{figurethermal}) & Heating raises ionization states (e.g., a fraction of Fe IX becomes Fe X); cooling does the opposite & Heating: Emission loss in lines with lower peak formation temperatures and near simultaneous emission gain in lines with higher peak formation temperatures; vice versa for cooling & Heating: Area near AR darkens in channels with lower peak formation temperature and near simultaneous brightening in channels with higher peak formation temperatures; vice versa for cooling \\ \hline
+	
+	Obscuration (Fig. \ref{figureobscuration}) & Dim feature (e.g., filament material) moves into line-of-sight over a bright feature (e.g., flare arcade) & Drop of emission lines proportional to their absorption cross section in the obscuring material & Direct observation of this obscuration process \\ \hline
+	
+	Wave (Fig. \ref{figurewave}) & Wave disturbance propagates globally, causing compression/rarefaction of plasma as wave passes by & No effects have been identified & Direct observation of this wave process, especially apparent with difference movies \\ \hline
+	
+	Doppler & Fast moving plasma Doppler shifts away from resonant fluorescence with solar emission lines & Doppler wavelength shift of emission lines and change in intensity, possibly also observed as line broadening & Change in intensity of moving plasma as its velocity changes \\ \hline
+	
+	Bandpass & Emissions from fast moving plasma have Doppler wavelength shift & Emission line shifts in wavelength or has broadening & Doppler shift convolves with band-pass sensitivity to cause apparent reduction in emission \\ \hline
+	
+	\end{tabular}
+    \\ \rule{0mm}{5mm}
+\end{center}
+\label{tablesummary}
+\end{table}
 
-
-\begin{figure}[htbp]
-    \caption[Bitmap images]{
-	The JPEG bitmap format is great for photos but
-	crummy for diagrams (including drawings, graphs,
-	charts) because it can't gracefully handle sharp edges.
-	Note the same bitmap image below from a PNG file and
-	from a JPG file; the latter shows characteristic
-	``ringing'' at sharp edges -- including text!
-	Seriously, magnify and look closely at the JPG's
-	awful lines and edges.
-	Vector-format PDF is the best for diagrams, but
-	if you must use a bitmap image, let it be PNG.
-	~ (Left: file {\it drawing.png}.
-	Right: file {\it drawing.jpg}.)
-	}
-    \begin{center}
-	\includegraphics[width=70mm]{figs/drawing.png}
-	${}^{}$ ~
-	${}^{}$ ~
-	${}^{}$
-	\includegraphics[width=70mm]{figs/drawing.jpg}
-    \end{center}
-\label{bitmapImages}
-\end{figure}
-
-
-
-\section{Lists in {\tt thesis} class}
+\section{Thermal Dimming}
 
 In {\tt thesis} class (for Colorado University),
 lists are defined so that nested lists will be
@@ -145,27 +91,42 @@ and Lao et~al.\cite{lao:paper},
 fictional references that are in the bibliographic
 source file \verb9refs.bib9.
 
-\begin{table}[htb]
-    \caption[Example of a table with its own footnotes]{
-	Here is an example of a table with its own footnotes.
-	Don't use the $\backslash${\tt footnote} macro if you
-	don't want the footnotes at the bottom of the page.
-	Also, note that in a thesis the caption goes
-	\emph{above} a table, unlike figures.
+\section{Obscuration Dimming}
+
+\section{Wave Dimming}
+
+\section{Two Possible but Unobserved Dimming Mechanisms}
+
+\section{Mass-loss Dimming}
+
+
+
+Figure \ref{xfigDiagram} shows an image from a PDF file
+imported into this document
+using the \verb2graphicx2 package.
+The command \verb2\usepackage{graphicx}2, which appears
+near the very top of the main \LaTeX{} file, reads in
+this package which defines the
+\verb2\includegraphics{}2 macro.
+
+
+\begin{figure}[htbp]
+	\caption[Cylinder and measurements]{
+	This diagram of a cylinder and various
+	measurements and quantities was actually
+	made using {\bf xfig}, a freeware
+	drawing program for Unix systems.
+	Diagrams can be exported directly to PDF
+	files, the preferred format for
+	vector graphics.  Vector graphics can
+	be magnified indefinitely without degradation,
+	whereas bitmap images (JPG and PNG)
+	must be pretty high-resolution if you don't
+	want them looking all pixellated when
+	magnified.
 	}
     \begin{center}
-    \begin{tabular}{||l|c|c|c|c||} \hline
-	& $S$ & $P$ &   $Q^{\ast}$  & $D^{\dagger}$ \\	% footnote symbols!
-	wave form & (kVA) & (kW) & (kVAr) & (kVAd) \\  \hline \hline
-	Fig.  \ref{xfigDiagram}a  & 25.48 & 25.00 & -2.82 & 4.03 \\ \hline
-	Fig.  \ref{xfigDiagram}b  & 25.11 & 18.02 & -9.75 & 14.52 \\ \hline
-	Table \ref{pdftable}  & 24.98 & 22.26 & 9.19 & 6.64 \\ \hline
-	Table \ref{powertable}  & 23.48 & 15.00 & 6.59 & 16.82 \\ \hline
-	Fig.  \ref{pyramid}  & 24.64 & 22.81 & -0.44 & 9.3 \\ \hline
-	\end{tabular}
-   \\ \rule{0mm}{5mm}
-   ${}^\ast$kVAr means reactive power.		% footnote symbol
-\\ ${}^\dagger$kVAd means distortion power.	% footnote symbol
-\end{center}
-\label{powertable}
-\end{table}
+	\includegraphics[width=100mm]{figs/cyl.pdf}
+    \end{center}
+\label{xfigDiagram}
+\end{figure}

@@ -1,1 +1,14 @@
 .DS_Store
+*.aux
+
+*.log
+
+*.aux
+
+*.blg
+
+*.gz
+
+LaTeX/.texpadtmp/Mason PhD Dissertation.synctex.gz
+
+*.toc
