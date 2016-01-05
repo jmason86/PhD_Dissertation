@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 JAN 2016 15:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 JAN 2016 17:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -226,24 +226,24 @@ Putting page number on short ToC
 Putting page number on short LoF
 Putting page number on short LoT
 
-(/Users/jmason86/Dropbox/Research/Woods_LASP/Papers/20160501 Dissertation/LaTeX
-/.texpadtmp/mythesis.aux)
+(/Users/jmason86/Dropbox/Research/Woods_LASP/Papers/20160501 Dissertation/PhD_D
+issertation/LaTeX/.texpadtmp/mythesis.aux)
 \openout1 = `mythesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -274,7 +274,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring OFF on input line 62.
+Package hyperref Info: Link coloring OFF on input line 60.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -284,14 +284,14 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count109
 )
-LaTeX Info: Redefining \ref on input line 62.
-LaTeX Info: Redefining \pageref on input line 62.
-LaTeX Info: Redefining \nameref on input line 62.
+LaTeX Info: Redefining \ref on input line 60.
+LaTeX Info: Redefining \pageref on input line 60.
+LaTeX Info: Redefining \nameref on input line 60.
 
-(/Users/jmason86/Dropbox/Research/Woods_LASP/Papers/20160501 Dissertation/LaTeX
-/.texpadtmp/mythesis.out)
-(/Users/jmason86/Dropbox/Research/Woods_LASP/Papers/20160501 Dissertation/LaTeX
-/.texpadtmp/mythesis.out)
+(/Users/jmason86/Dropbox/Research/Woods_LASP/Papers/20160501 Dissertation/PhD_D
+issertation/LaTeX/.texpadtmp/mythesis.out)
+(/Users/jmason86/Dropbox/Research/Woods_LASP/Papers/20160501 Dissertation/PhD_D
+issertation/LaTeX/.texpadtmp/mythesis.out)
 \@outlinefile=\write3
 \openout3 = `mythesis.out'.
 
@@ -306,11 +306,11 @@ Making Abstract Page
 [2
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 62.
+LaTeX Font Info:    Try loading font information for U+msa on input line 60.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 62.
+LaTeX Font Info:    Try loading font information for U+msb on input line 60.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -335,8 +335,8 @@ Making Short ToC...
 centered
 Short Chapter (page numbered)
 
-(/Users/jmason86/Dropbox/Research/Woods_LASP/Papers/20160501 Dissertation/LaTeX
-/.texpadtmp/mythesis.toc)
+(/Users/jmason86/Dropbox/Research/Woods_LASP/Papers/20160501 Dissertation/PhD_D
+issertation/LaTeX/.texpadtmp/mythesis.toc)
 \tf@toc=\write4
 \openout4 = `mythesis.toc'.
 
@@ -349,8 +349,8 @@ Making Short LoT...
 centered
 Short Chapter (page numbered)
 
-(/Users/jmason86/Dropbox/Research/Woods_LASP/Papers/20160501 Dissertation/LaTeX
-/.texpadtmp/mythesis.lot)
+(/Users/jmason86/Dropbox/Research/Woods_LASP/Papers/20160501 Dissertation/PhD_D
+issertation/LaTeX/.texpadtmp/mythesis.lot)
 \tf@lot=\write5
 \openout5 = `mythesis.lot'.
 
@@ -363,8 +363,8 @@ Making Short LoF...
 centered
 Short Chapter (page numbered)
 
-(/Users/jmason86/Dropbox/Research/Woods_LASP/Papers/20160501 Dissertation/LaTeX
-/.texpadtmp/mythesis.lof)
+(/Users/jmason86/Dropbox/Research/Woods_LASP/Papers/20160501 Dissertation/PhD_D
+issertation/LaTeX/.texpadtmp/mythesis.lof)
 \tf@lof=\write6
 \openout6 = `mythesis.lof'.
 
@@ -436,8 +436,8 @@ Package pdftex.def Info: figs/tableD.pdf used on input line 114.
 (pdftex.def)             Requested size: 393.87128pt x 509.72522pt.
  [7]
 [8 <./figs/tableD.pdf>] [9] [10])
-(/Users/jmason86/Dropbox/Research/Woods_LASP/Papers/20160501 Dissertation/LaTeX
-/.texpadtmp/mythesis.bbl [11]
+(/Users/jmason86/Dropbox/Research/Woods_LASP/Papers/20160501 Dissertation/PhD_D
+issertation/LaTeX/.texpadtmp/mythesis.bbl [11]
 centered
 ) (./appendixA.tex [12
 
@@ -450,28 +450,28 @@ centered
  \th@ChapterStyle\th@DoChapCenterAppendix \th@ChapterStyle B.
 centered
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 79.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 77.
  [15
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 79.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 77.
 
-(/Users/jmason86/Dropbox/Research/Woods_LASP/Papers/20160501 Dissertation/LaTeX
-/.texpadtmp/mythesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 79.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 79.
+(/Users/jmason86/Dropbox/Research/Woods_LASP/Papers/20160501 Dissertation/PhD_D
+issertation/LaTeX/.texpadtmp/mythesis.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 77.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 77.
 Package rerunfilecheck Info: File `mythesis.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 79.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 77.
  ) 
 Here is how much of TeX's memory you used:
  6003 strings out of 493089
- 88820 string characters out of 6134842
- 178469 words of memory out of 5000000
+ 89143 string characters out of 6134842
+ 179568 words of memory out of 5000000
  9302 multiletter control sequences out of 15000+600000
  14971 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,13n,39p,670b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,13n,39p,1137b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -487,7 +487,8 @@ e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
 Output written on "/Users/jmason86/Dropbox/Research/Woods_LASP/Papers/20160501 
-Dissertation/LaTeX/.texpadtmp/mythesis.pdf" (23 pages, 250565 bytes).
+Dissertation/PhD_Dissertation/LaTeX/.texpadtmp/mythesis.pdf" (23 pages, 251876 
+bytes).
 PDF statistics:
  342 PDF objects out of 1000 (max. 8388607)
  290 compressed objects within 3 object streams
