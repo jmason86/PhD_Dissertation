@@ -9,4 +9,6 @@
 
 *.toc
 
-.texpadtmp/*
+.texpadtmp/
+
+LaTeX/.texpadtmp/Mason PhD Dissertation.log
