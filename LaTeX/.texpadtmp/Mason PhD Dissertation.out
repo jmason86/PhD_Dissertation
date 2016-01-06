@@ -1,25 +1,28 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.1.1}{Lists in thesis class}{chapter.1}% 2
-\BOOKMARK [0][-]{chapter.2}{Relevant Background}{}% 3
-\BOOKMARK [1][-]{section.2.1}{Explanation of equations}{chapter.2}% 4
-\BOOKMARK [1][-]{section.2.2}{Yet another section}{chapter.2}% 5
-\BOOKMARK [2][-]{subsection.2.2.1}{ Just meaningless text to test lines per page }{section.2.2}% 6
-\BOOKMARK [2][-]{subsection.2.2.2}{This is a subsection}{section.2.2}% 7
-\BOOKMARK [2][-]{subsection.2.2.3}{This is another subsection}{section.2.2}% 8
-\BOOKMARK [1][-]{section.2.3}{The End}{chapter.2}% 9
-\BOOKMARK [0][-]{chapter.3}{Mechanisms of Coronal Dimming}{}% 10
-\BOOKMARK [1][-]{section.3.1}{Lists in thesis class}{chapter.3}% 11
-\BOOKMARK [0][-]{chapter.4}{Coronal Dimming Case Study}{}% 12
-\BOOKMARK [1][-]{section.4.1}{Lists in thesis class}{chapter.4}% 13
-\BOOKMARK [0][-]{chapter.5}{Semi-Statistical Study of Coronal Dimming}{}% 14
-\BOOKMARK [1][-]{section.5.1}{Lists in thesis class}{chapter.5}% 15
-\BOOKMARK [0][-]{chapter.6}{Overview of MinXSS Solar CubeSat}{}% 16
-\BOOKMARK [1][-]{section.6.1}{Lists in thesis class}{chapter.6}% 17
-\BOOKMARK [0][-]{chapter.7}{Thermal Balance Analysis for a CubeSat}{}% 18
-\BOOKMARK [1][-]{section.7.1}{Lists in thesis class}{chapter.7}% 19
-\BOOKMARK [0][-]{chapter.8}{Summary and Future Work}{}% 20
-\BOOKMARK [1][-]{section.8.1}{Lists in thesis class}{chapter.8}% 21
-\BOOKMARK [-1][-]{chapter*.6}{ Bibliography}{}% 22
-\BOOKMARK [0][-]{appendix.A}{Coronal Dimming Event List and Ancillary Data}{chapter*.6}% 23
-\BOOKMARK [0][-]{appendix.B}{MinXSS CubeSat Mass/Power Tables}{chapter*.6}% 24
-\BOOKMARK [0][-]{appendix.C}{MinXSS Thermal Model Parameter Tables}{chapter*.6}% 25
+\BOOKMARK [0][-]{chapter.2}{Relevant Background}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Solar Corona}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{Physics of Solar Eruptive Event Initiation}{chapter.2}% 4
+\BOOKMARK [2][-]{subsection.2.2.1}{ Just meaningless text to test lines per page }{section.2.2}% 5
+\BOOKMARK [2][-]{subsection.2.2.2}{Space Weather}{section.2.2}% 6
+\BOOKMARK [2][-]{subsection.2.2.3}{This is another subsection}{section.2.2}% 7
+\BOOKMARK [1][-]{section.2.3}{EUV Emission}{chapter.2}% 8
+\BOOKMARK [0][-]{chapter.3}{Mechanisms of Coronal Dimming}{}% 9
+\BOOKMARK [1][-]{section.3.1}{Thermal Dimming}{chapter.3}% 10
+\BOOKMARK [1][-]{section.3.2}{Obscuration Dimming}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.3}{Wave Dimming}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.4}{Two Possible but Unobserved Dimming Mechanisms}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.5}{Mass-loss Dimming}{chapter.3}% 14
+\BOOKMARK [0][-]{chapter.4}{Coronal Dimming Case Study}{}% 15
+\BOOKMARK [1][-]{section.4.1}{Lists in thesis class}{chapter.4}% 16
+\BOOKMARK [0][-]{chapter.5}{Semi-Statistical Study of Coronal Dimming}{}% 17
+\BOOKMARK [1][-]{section.5.1}{Lists in thesis class}{chapter.5}% 18
+\BOOKMARK [0][-]{chapter.6}{Overview of MinXSS Solar CubeSat}{}% 19
+\BOOKMARK [1][-]{section.6.1}{Lists in thesis class}{chapter.6}% 20
+\BOOKMARK [0][-]{chapter.7}{Thermal Balance Analysis for a CubeSat}{}% 21
+\BOOKMARK [1][-]{section.7.1}{Lists in thesis class}{chapter.7}% 22
+\BOOKMARK [0][-]{chapter.8}{Summary and Future Work}{}% 23
+\BOOKMARK [1][-]{section.8.1}{Lists in thesis class}{chapter.8}% 24
+\BOOKMARK [-1][-]{chapter*.6}{ Bibliography}{}% 25
+\BOOKMARK [0][-]{appendix.A}{Coronal Dimming Event List and Ancillary Data}{chapter*.6}% 26
+\BOOKMARK [0][-]{appendix.B}{MinXSS CubeSat Mass/Power Tables}{chapter*.6}% 27
+\BOOKMARK [0][-]{appendix.C}{MinXSS Thermal Model Parameter Tables}{chapter*.6}% 28

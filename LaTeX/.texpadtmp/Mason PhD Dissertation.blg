@@ -1,46 +1,51 @@
 This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Mason PhD Dissertation.aux
-The style file: plain.bst
-Database file #1: ../refs.bib
-You've used 15 entries,
-            2118 wiz_defined-function locations,
-            587 strings with 5619 characters,
-and the built_in function-call counts, 4428 in all, are:
-= -- 461
-> -- 161
-< -- 2
-+ -- 65
-- -- 50
-* -- 288
-:= -- 761
-add.period$ -- 48
-call.type$ -- 15
-change.case$ -- 68
+The style file: apalike.bst
+Database file #1: /Users/jmason86/Dropbox/Research/Literature/library.bib.bib
+Warning--I didn't find a database entry for "lao:thesis"
+Warning--I didn't find a database entry for "lao:paper"
+Warning--I didn't find a database entry for "mulick"
+Warning--I didn't find a database entry for "baylor"
+You've used 0 entries,
+            1935 wiz_defined-function locations,
+            475 strings with 3782 characters,
+and the built_in function-call counts, 17 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 0
+:= -- 7
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 15
-duplicate$ -- 166
-empty$ -- 374
-format.name$ -- 50
-if$ -- 913
-int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 14
-newline$ -- 79
-num.names$ -- 30
-pop$ -- 61
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 3
+num.names$ -- 0
+pop$ -- 0
 preamble$ -- 1
-purify$ -- 55
+purify$ -- 0
 quote$ -- 0
-skip$ -- 99
+skip$ -- 1
 stack$ -- 0
-substring$ -- 322
-swap$ -- 19
-text.length$ -- 2
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 58
+type$ -- 0
 warning$ -- 0
-while$ -- 50
-width$ -- 17
-write$ -- 169
+while$ -- 0
+width$ -- 0
+write$ -- 2
+(There were 4 warnings)
