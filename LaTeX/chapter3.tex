@@ -27,23 +27,77 @@ This chapter details the physics of coronal dimming. There are theoretically man
 \end{table}
 
 \section{Thermal Dimming}
-Temperature evolution of emission lines is only interpreted as observed dimming if one is not careful to observe co-spatial emission lines at different peak formation temperatures. As plasma is heated or cooled, the ionization fraction changes, necessarily causing the emission intensity to change (Figure \ref{thermalDimming}). For example, heating causes some Fe IX to become Fe X and thus, in the absence of competing physical processes, 171 \AA\ emission drops while 177 \AA\ rises. This pattern was identified observationally in Figure 6 of \citet{Woods2011} using SDO/EVE data, \citet{Robbrecht2010} using STEREO/EUVI, \citet{Jin2009} and \citet{Imada2007} with Hinode/EIS. It can also be observed in the standard composite (multi-wavelength) movies produced by the AIA team; indeed, this is one of the prime purposes for the composites. The initiation time and duration of temperature evolution tends to be quite similar to mass-loss dimming, as they are typically both responses to the rapid release of magnetic field energy in active regions and require several hours of recovery time. Thus, thermal processes could be mistaken for mass loss if only a single spectral line was observed. Ideally, unblended emission lines from an entire coronal ionization sequence (e.g., Fe I to Fe XVIII) could be used to mitigate this convolution of dimming observations. However, as we will show in Section 4.3, it may be sufficient to have observations of two sufficiently separated ionizations states to differentiate between thermal evolution and mass-loss dimming. This is due, in part, to the fact that hotter lines (e.g., Fe XV and above) are primarily emitted from confined loops near the flare and are thus not strongly impacted by mass-loss dimming. Multi-wavelength Doppler studies have shown that while all (measured) emission lines become blue-shifted (indicating an outflow), the magnitude of the shift is strongly directly proportional to the lines peak formation temperature \citep{Imada2007, Jin2009}. In particular, Fe IX 171 \AA\ emission can be depressed further after open magnetic field lines from the departing CME close down and cause another bout of heating; causing e.g., Fe IX to become Fe X and beyond, which propagates outward as a "heat wave dimming" \citep{Robbrecht2010}. It may even be that cool emissions like Fe IX 171 \AA\ are simply moving too slow to account for mass depletion and that warmer lines, such as Fe XII 195 \AA\ better represent the mass being ejected \citep{Robbrecht2010}. However, \citet{Mason2014} found that the onset time, slope, and duration of dimming are comparable in SDO/AIA 171 \AA\ and 193 \AA\footnote{Note that the SDO/AIA 193 \AA\ band encompasses 195 \AA\ }and in SDO/EVE 171 \AA\ and 195 \AA\ (described in Chapter \ref{chaptercasestudy}). 
+Temperature evolution of emission lines is only interpreted as observed dimming if one is not careful to observe co-spatial emission lines at different peak formation temperatures. As plasma is heated or cooled, the ionization fraction changes, necessarily causing the emission intensity to change (Figure \ref{thermalDimming}). For example, heating causes some Fe IX to become Fe X and thus, in the absence of competing physical processes, 171 \AA\ emission drops while 177 \AA\ rises. This pattern was identified observationally in Figure 6 of \citet{Woods2011} using SDO/EVE data, \citet{Robbrecht2010} using STEREO/EUVI, \citet{Jin2009} and \citet{Imada2007} with Hinode/EIS. It can also be observed in the standard composite (multi-wavelength) movies produced by the AIA team; indeed, this is one of the prime purposes for the composites. The initiation time and duration of temperature evolution tends to be quite similar to mass-loss dimming, as they are typically both responses to the rapid release of magnetic field energy in active regions and require several hours of recovery time. Thus, thermal processes could be mistaken for mass loss if only a single spectral line was observed. Ideally, unblended emission lines from an entire coronal ionization sequence (e.g., Fe I to Fe XVIII) could be used to mitigate this convolution of dimming observations. However, as we will show in Section 4.3, it may be sufficient to have observations of two sufficiently separated ionizations states to differentiate between thermal evolution and mass-loss dimming. This is due, in part, to the fact that hotter lines (e.g., Fe XV and above) are primarily emitted from confined loops near the flare and are thus not strongly impacted by mass-loss dimming. Multi-wavelength Doppler studies have shown that while all (measured) emission lines become blue-shifted (indicating an outflow), the magnitude of the shift is strongly directly proportional to the lines peak formation temperature \citep{Imada2007, Jin2009}. Figure \ref{upflowVsTemperature} shows this dependence for a plage region with a dimming during an X-class flare. In particular, Fe IX 171 \AA\ emission can be depressed further after open magnetic field lines from the departing CME close down and cause another bout of heating; causing e.g., Fe IX to become Fe X and beyond, which propagates outward as a "heat wave dimming" \citep{Robbrecht2010}. It may even be that cool emissions like Fe IX 171 \AA\ are simply moving too slow to account for mass depletion and that warmer lines, such as Fe XII 195 \AA\ better represent the mass being ejected \citep{Robbrecht2010}. However, \citet{Mason2014} found that the onset time, slope, and duration of dimming are comparable in SDO/AIA 171 \AA\ and 193 \AA\footnote{Note that the SDO/AIA 193 \AA\ band encompasses 195 \AA\ }and in SDO/EVE 171 \AA\ and 195 \AA\ (described in Chapter \ref{chaptercasestudy}). 
 
 \begin{figure}[!htb]
 	\caption{
 	    Schematic depicting the observational difference between dimming and non-dimming emission
-	    lines. Relative to a pre-eruption time (left), the Fe ix emission drops while the Fe xiv
+	    lines. Relative to a pre-eruption time (left), the Fe IX emission drops while the Fe XIV
 	    emission increases (right) due to heating of the plasma and redistribution of ionization
 	    states.
 	}
     \begin{center}
-	    \includegraphics[width=150mm]{Images/ThermalDimming.png}
+	    \includegraphics[width=100mm]{Images/ThermalDimming.png}
     \end{center}
     \label{thermalDimming}
 \end{figure}
-It is important to note that, in general, the magnitude of total observed dimming in a given line in EVE spectra is inversely proportional to its peak formation temperature, which can be inferred from Figure 3. This figure was generated using a simple algorithm that searched the EVE catalog for relative irradiance decreases greater than a specified threshold (1\%, 2\%, 3\%) after flares exceeding GOES X-ray class of C1. The window of time searched was bounded by the GOES event start time and the sooner of either 4 hours after the start time or the next GOES event start time. This algorithm was applied to all EVE data from mission start to 23 September 2013. Figure 3 shows that the number of dimmings dramatically decreases as the magnitude threshold is increased, and decreases slightly with higher peak formation temperature. This latter effect is due to flare heating adding emission in the higher temperature, higher ionization state, lines that partially offsets the mass-loss dimming. These trends indicate that at sufficiently high peak formation temperature, no dimming may be observed at all, even at the lowest detection threshold, which is consistent with the hotter lines being restricted to the confined flare loops and hence experiencing no mass loss. An instrument with spatial resolution like AIA can be used to isolate the confined flaring loops and create a time series of just the dimming region, and this is a procedure carried out in Chapter \ref{chaptercasestudy}. AIA too has its own limitations: relevant in this case is the relatively lower spectral resolution that blends together emission from several ionization states of Fe. With EVE and AIA combined, it is possible to analyze thermal dimming but the idea instrument for fully characterizing this phenomenon would be a high-resolution hyperspectral imager in the EUV.  
+
+\begin{figure}[!htb]
+    \caption{
+        Outflow velocity vs emission line peak formation temperature for a dimming region near a plage. 
+        Adapted from \citet{Imada2007}.
+        }
+    \begin{center}
+        \includegraphics[width=90mm]{Images/UpflowVsTemperature.png}
+    \end{center}
+    \label{upflowVsTemperature}    
+\end{figure}
+
+It is important to note that, in general, the magnitude of total observed dimming in a given line in EVE spectra is inversely proportional to its peak formation temperature, which can be inferred from Figure \ref{detectedDimmingVsIonization}. This figure was generated using a simple algorithm that searched all EVE/MEGS-A data for relative irradiance decreases greater than a specified threshold (1\%, 2\%, 3\%) of flares exceeding GOES X-ray class of C1. The window of time searched was bounded by the GOES event start time and the sooner of either 4 hours after the start time or the next GOES event start time. This algorithm was applied to all EVE data from mission start (2010 February 10) to the failure of the MEGS-A instrument (2014 May 26). MEGS-A takes the measurements of all wavelengths studied here. Figure \ref{detectedDimmingVsIonization} shows that the number of dimmings dramatically decreases as the magnitude threshold is increased, and decreases slightly with higher peak formation temperature. This latter effect is partially due to flare heating adding emission in the higher temperature, higher ionization state, lines that partially offsets the mass-loss dimming. Additionally, these trends indicate that at sufficiently high peak formation temperature, no dimming may be observed at all, even at the lowest detection threshold, which is consistent with the hotter lines being restricted to the confined flare loops and hence experiencing no mass loss. In other words, the higher the peak formation temperature, the greater the relative contribution of more confined loops to the measured emission. 
+
+\begin{figure}[!h]
+    \caption{
+        Number of identified dimmings in EVE for six spectral lines using different percentage dimming depths as the
+        threshold for a detection. There were 263 flares used to trigger an automated search for dimming in EVE. 
+        Note the decrease in detections with increasing ionization state (i.e. peak formation temperature).
+    }
+    \begin{center}
+        \includegraphics[width=150mm]{Images/DetectedDimmingVsIonization.png}
+    \end{center}
+    \label{detectedDimmingVsIonization}
+
+\end{figure}
+
+An instrument with spatial resolution like AIA can be used to isolate the confined flaring loops and create a time series of just the dimming region, and this is a procedure carried out in Chapter \ref{chaptercasestudy}. AIA too has its own limitations: relevant in this case is the relatively lower spectral resolution that blends together emission from several ionization states of Fe. With EVE and AIA combined, it is possible to analyze thermal dimming but the idea instrument for fully characterizing this phenomenon would be a high-resolution hyperspectral imager in the EUV.
 
 \section{Obscuration Dimming}
+The physical process that results in apparent dimming here is material that is dark in a particular wavelength (e.g., a filament) moving between bright material (e.g., flare arcade) and the observer (Figure \ref{obscurationDimming}). In optically thick wavelengths, the dark plasma absorbs some of the bright emission, resulting in an apparent decrease in emission. The slow draining of plasma back to the corona can obscure underlying emission for hours, and absorption can be observed in both coronal and chromospheric lines (e.g., \citet{Gilbert2013}). Although the obscuration dimmings can exhibit time and spatial scales comparable to the more short-lived mass-loss dimmings, it is fairly straightforward to identify absorption signatures in the EUV images. It may also be possible to identify this phenomenon with EVE using the He II 256 Å and 304 Å chromospheric emission lines and knowledge of the absorption cross-section through filamentary plasma. Figure \ref{photoionizationCrossSection} shows the photoionization cross-sections of the dominant species in the solar corona. Hydrogen and helium contribute an order-of-magnitude more absorption than metals\footnote{"Metals" in the astrophysical sense}, and thus the effect of metals can be ignored. The cross-sections are quite steep in the wavelength range of interest here (roughly 150-310 \AA). This means that approximately twice as much He II 256 Å than He II 304 Å emission will come through a filament. Furthermore, the mass-loss dimming sensitive lines (e.g., Fe IX 171 \AA\ and 195 \AA) will be less affected by this obscuration, but a 1\% effect would be sufficient to cause a "false" detection. It may be possible to identify obscuration dimming with EVE's 256 \AA\ and 304 \AA\ measurements and determine that an obscuration dimming has occurred. However, further analysis of this type of dimming is required before any conclusions can be drawn. 
+
+\begin{figure}[!h]
+    \caption{
+        Schematic depicting the process of obscuration dimming. A filament previously obscuring only the quiet Sun (left)
+        expands and moves in front of a flare arcade (right). This results in a decreased observed emission from the flare
+        arcade in wavelengths where the filament is optically thick.
+    }
+    \begin{center}
+        \includegraphics[width=75mm]{Images/ObscurationDimming.png}
+    \end{center}
+    \label{obscurationDimming}
+\end{figure}
+
+\begin{figure}[!h]
+    \caption{
+        Photoionization cross-sections for He I (dot-dashed line), He II (solid line), and H (dashed line) per hydrogen
+        atom. The inset shows a wider wavelength range of the same data but with metals shown for comparison. The dashed
+        vertical bars at the bottom indicate the edges of respective continua. The grey regions at the bottom are not 
+        pertinent here as they correspond to specifics of the SOHO/CDS instrument. Adapted from \citet{Andretta2003}. 
+    }
+    \begin{center}
+        \includegraphics[width=150mm]{Images/PhotoionizationCrossSection.png}
+    \end{center}
+    \label{photoionizationCrossSection}
+\end{figure}
+
 
 \section{Wave Dimming}
 \label{sec:waveDimming}
