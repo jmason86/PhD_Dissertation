@@ -81,25 +81,6 @@ Figure \ref{eve2010aug7} shows a trend that is consistent with the findings from
 
 It is also interesting to note in Figure \ref{eve2010aug7} that the onset of dimming in the dimming lines is nearly simultaneous. The gradual-phase flare peak is delayed in lower ionizations of Fe, which is due to a cooling effect. The primary source of energy release in a flare is near the point of magnetic reconnection, typically far above the footpoints of the magnetic loops involved, in the corona. Some of the energy goes into the acceleration of particles downward. When these particles impact the denser chromosphere, they cause the heating and chromospheric evaporation. As that thermal plasma enters the corona it cools \citep{Fletcher2011}, and highly ionized Fe gains electrons. Thus, the peak is later for lower ionization states as seen in Figure \ref{eve2010aug7}. The Fe IX 171 \AA\ irradiance, in particular, shows the competing effects of this gradual phase flare peak and coronal dimming. Images with spatial resolution can isolate the flaring region responsible for this peak, as is shown with the magenta contour in Figure \ref{aia2010aug7}. Alternatively, we have developed a method for isolating and removing this peak in dimming lines with the spatially-integrated irradiance from EVE, which will be detailed in Section \ref{sec:deconvolve}. 
 
-%\noindent
-%\begin{singlespace}
-%\begin{minipage}{\linewidth}  % to keep image and caption on one page
-%    \makebox[\linewidth]{  % to center the image
-%    \includegraphics[keepaspectratio=true,scale=0.75]{Images/Eve2010Aug7.png}}
-%    \label{eve2010aug7}
-%    \captionof{figure}{
-%        One minute average EVE light curves of the 2010 August 7 coronal dimming event for the spectral lines listed in 
-%        Table <TODO: INSERT>, as well as the GOES 1–8 \AA\ channel light curve. The leftmost vertical dashed line indicates
-%        the GOES event start time, while the other vertical dashed line indicates the GOES event peak time. Peak formation 
-%        temperature of the EVE spectral lines increases from top to bottom plot. Fe IX to Fe XIII show clear dimming, Fe XIV
-%        is borderline, and Fe XV to Fe XX show smooth brightening with no dimming. The Fe XX 131 \AA\ profile is very 
-%        similar to GOES 1–8 \AA, indicating that this line in EVE is a good proxy for gradual phase timing. Also note the 
-%        vertical axes: dimming is on the order of a few percent for the cooler Fe emissions while the hotter Fe emissions 
-%        have bright peaks in the hundreds of percent. All percent changes are calculated from the spectral irradiance at 
-%        17:00 UT.
-%    }
-%\end{minipage}
-%\end{singlespace}
 \newpage
 \begin{singlespace}
 \begin{figure}[H]
@@ -239,13 +220,13 @@ Figure \ref{eve2011aug4} shows selected extracted emission lines from EVE for th
 
 \section{Flare-Dimming Deconvolution Method}
 \label{sec:deconvolve}
-Figures \ref{eve2010aug7} and \ref{eve2011aug4} showed how cooling and heating impact the time of an irradiance peak in each ionization state of Fe: cooling causes the low ionization states to peak later and heating causes the reverse. In either case, it is clear that dimming magnitude decreases with higher ionization states of Fe. Eventually, around Fe XIV at 211 \AA, dimming is no longer clear. The next ionization state, Fe XV at 284 \AA, shows strong brightening in response to the flare but no dimming. The shape of the flare peak is similar in all wavelengths, the it appears to become more smooth at higher ionization states because of the significantly larger increase making the small oscillations imperceptible in the plots. Using this observation, we developed a simple algorithm to remove the flare peak in the dimming lines. We make the assumption that the peak in the high ionization states is a good proxy for what \textit{would have} been observed in the low ionization states if there were no dimming. However, the magnitudes and timing are quite different. To account for this, we scale the larger peak down and shift it in time so that they are matched. The ten-second EVE data are averaged to two-minutes to reduce noise (see black line in Figure \ref{flaredimmingdeconvolution}) and the simple IDL \textit{max} function applied to find the peak in the light curve for every emission line listed in Table <INSERT>. Then, the scaled non-dimming emission line is shifted in time such that its peak matches the one in the dimming line (see green line in Figure \ref{flaredimmingdeconvolution}). Finally, the scaled and time-shifted non-dimming light curve is subtracted from the dimming emission line (see blue line in Figure \ref{flaredimmingdeconvolution}). 
+Figures \ref{eve2010aug7} and \ref{eve2011aug4} showed how cooling and heating impact the time of an irradiance peak in each ionization state of Fe: cooling causes the low ionization states to peak later and heating causes the reverse. In either case, it is clear that dimming magnitude decreases with higher ionization states of Fe. Eventually, around Fe XIV at 211 \AA, dimming is no longer clear. The next ionization state, Fe XV at 284 \AA, shows strong brightening in response to the flare but no dimming. The shape of the flare peak is similar in all wavelengths, though it appears to become more smooth at higher ionization states because of the significantly larger increase making the small oscillations imperceptible in the plots. Using this observation, we developed a simple algorithm to remove the flare peak in the dimming lines. We make the assumption that the peak in the high ionization states is a good proxy for what \textit{would have} been observed in the low ionization states if there were no dimming. However, the magnitudes and timing are quite different. To account for this, we scale the larger peak down and shift it in time so that they are matched. An example of the the impact on the irradiance is shown in Figure \ref{flaredimmingdeconvolution} and a flow-chart of the algorithm is shown in Figure \ref{flaredimmingdeconvolutionalgorithm}. The ten-second EVE data are averaged to two-minutes to reduce noise (see black line in Figure \ref{flaredimmingdeconvolution}) and the simple IDL \textit{max} function applied to find the peak in the light curve for every emission line listed in Table <INSERT>. Then, the scaled non-dimming emission line is shifted in time such that its peak matches the one in the dimming line (see green line in Figure \ref{flaredimmingdeconvolution}). Finally, the scaled and time-shifted non-dimming light curve is subtracted from the dimming emission line (see blue line in Figure \ref{flaredimmingdeconvolution}). 
 
 \begin{figure}[!h]
     \begin{center}
-	    \includegraphics[width=166mm]{Images/DimmingCorrectionProcedure.png}
+	    \includegraphics[width=100mm]{Images/DimmingCorrectionProcedure.png}
     \end{center}
-    \caption[Flare-dimming deconvolution method]{
+    \caption[Flare-dimming deconvolution method example]{
         Example of the flare-dimming deconvolution method. This particular event is the simple case described in 
         Section \ref{sec:observationssimple}. A non-dimming line (e.g., 284 \AA) is scaled down and shifted in 
         time such that its flare peak matches the one in a dimming line (green and black, respectively). The scaled and 
@@ -257,12 +238,115 @@ Figures \ref{eve2010aug7} and \ref{eve2011aug4} showed how cooling and heating i
     \label{flaredimmingdeconvolution}
 \end{figure}
 
+\begin{figure}[!h]
+    \begin{center}
+	    \includegraphics[width=160mm]{Images/DeconvolutionMethod.png}
+    \end{center}
+    \caption[Flare-dimming deconvolution algorithm schematic]{
+        Flow-chart for the flare-dimming deconvolution algorithm. Rounded-rectangular boxes describe the steps and the 
+        purple boxes indicate the units of the irradiance at that step. 
+   	}
+    \label{flaredimmingdeconvolutionalgorithm}
+\end{figure}
+
+
 The red line in Figure \ref{flaredimmingdeconvolution} is the same red line that was in Figure \ref{aia2010aug7}, which corresponded to the dimming area in AIA thought to be most associated with mass-loss from the corresponding observed CME. It is clear that the deconvolution method applied brings the EVE light curve much closer (from black line to blue line) to the AIA one (red line). The agreement is not perfect, particularly at later times, and the noise in EVE is greater even with the two-minute average than AIA. However, the agreement during the initial decline is much better and is where the slope of dimming is computed, which will be shown to be a critical proxy to CME velocity. The later rise in the corrected EVE line (blue) is due to a slow decrease in the scaled \& time-shifted correction line (green). The unaltered dimming line (black) is relatively flat in the later hours of the dimming, consistent with the AIA light curve (red). This behavior varies by event but a "bottomed-out" dimming is common. Typically, the maximum depth is reached quickly and maintained for several hours. It will later be shown that depth is another critical proxy for CMEs; this one for CME mass. In practice, the depth is measured at a point soon after the maximum dimming is reached, so behavior of the corrected EVE line (blue) is of less importance than the removal of the flare peak. Furthermore, the further in time one goes, the more likely it is for other events or physical processes to occur that would complicate the spatially-integrated EVE analysis. Duration of dimming may be an interesting parameter to study, but due to the continuing evolution and dynamics of the sun it is of secondary priority. Additionally, the duration is likely to be most closely linked to the physical processes responsible for filling plasma back into the void, relaxation of the disturbed system, and temperature evolution changing ionization fractions. All of these have a tenuous connection to CME kinetics and thus provide less promise of providing a physical justification for dimming proxies for CMEs. 
 
-Which combinations of dimming and non-dimming line make for the best dimming-isolated light curve? In the simple 2010 August 7 event, it was Fe IX 171 \AA\ (dimming) and Fe XV 284 \AA. In the 28 other cases studied (see Chapter \ref{chapterstatistical}), this same combination proved best. 
+Which combinations of dimming and non-dimming line make for the best dimming-isolated light curve? In the simple 2010 August 7 event, it was Fe IX 171 \AA\ (dimming) and Fe XV 284 \AA, respectively. In the 28 other cases studied (see Chapter \ref{chapterstatistical}), this same combination proved best. 
 
 \section{Error Propagation}
 \label{sec:deconvolveerrors}
+Coronal dimming is a transient event lasting several hours that is studied in terms of relative change from the initiation time. As such, no long-term degradation of EVE needs to be factored into uncertainties i.e. the absolute accuracy is not important but the measurement precision is most important for the dimming uncertainty. To estimate precision, a period of solar inactivity was analyzed: 2013 January 28 from 00:00 – 01:00 UT. The estimated precision of these 120-second averaged EVE line data was calculated as the variance of the mean, i.e., the standard deviation divided by the square root of the number of samples, which was 12 in this analysis \citep{Bevington1969} (pg 73). Table \ref{tab:evelineprecision} provides the estimated precision for each emission line used in this study, and provides a sense of how well we can detect SDO/EVE dimmings that have depths less than 5\% of the pre-flight irradiance level.
+
+\begin{table}[!h]
+    \caption[EVE precision by emission line]{
+    Estimated precision for selected emission lines in EVE spectra. The Fe IX 171 \AA\ and Fe XV 284 \AA\ emission lines
+    are the choice lines for dimming analysis.  
+    }
+    \begin{center}
+    \begin{tabular}{|l|l|l|} \hline
+	Ion & Wavelength (\AA) & Estimated Precision (\%) \\ \hline \hline
+	Fe IX & 171 & 0.06 \\ \hline
+	Fe X & 177 & 0.05  \\ \hline
+	Fe XI & 180 & 0.04 \\ \hline
+	Fe XII & 195 & 0.04 \\ \hline
+	Fe XIII & 202 & 0.04 \\ \hline
+	Fe XIV & 211 & 0.07 \\ \hline
+	Fe XV & 284 & 0.08 \\ \hline
+	Fe XVI & 335 & 0.17 \\ \hline
+	Fe XVIII & 94 & 0.08 \\ \hline
+	Fe XX & 132 & 0.20 \\ \hline
+	\end{tabular}
+    \\ \rule{0mm}{5mm}
+    \end{center}
+    \label{tab:evelineprecision}
+\end{table}
+
+These base uncertainties were propagated through each step of the EVE dimming correction method described in Section \ref{sec:deconvolve}, which were finally fed as measurement errors into IDL’s \textit{poly{\_}fit} function for fitting the dimming trend. First, the line precisions are combined with the provided reference time to compute percent change (see Figure \ref{flaredimmingdeconvolutionalgorithm}, Equation \ref{eq:percentchange}). 
+
+\begin{equation} 
+    \% change = 100 \times \frac{(irrad_t - irrad_0)}{irrad_0}
+    \label{eq:percentchange}
+\end{equation}
+
+\noindent where $irrad_t$ is the irradiance at each time and $irrad_0$ is the irradiance at the provided reference time. In practice, the latter is a manually selected pre-flare point that appears to correspond well to a quiet or well-behaved period. All of the uncertainty derivations to follow are based on the fundamental uncertainty, 
+
+\begin{gather}
+    F = f(X,Y) \\
+    \sigma^2_F = \sigma^2_x(\frac{\partial F}{\partial X})^2 + \sigma^2_Y(\frac{\partial F}{\partial Y})^2
+    \label{eq:genericuncertainty}
+\end{gather}
+
+\noindent where $F$ is a generic function that will be specified for each of the steps of the deconvolution method. The first step of computing percent change (F = Equation \ref{eq:percentchange}) has the corresponding uncertainty derivation: 
+
+\begin{gather*} 
+    \frac{\partial F}{\partial X} = \frac{100}{irrad_0} \implies 
+    (\frac{\partial F}{\partial X})^2 = (\frac{100}{irrad_0})^2 \\    
+    \frac{\partial F}{\partial Y} = -\frac{100 \times irrad_t}{irrad_0^2} 
+    \implies (\frac{\partial F}{\partial Y})^2 = (-\frac{100 \times irrad_t}{irrad_0^2})^2 \\
+    \therefore \sigma^2_F = \sigma^2_x(\frac{100}{irrad_0})^2 + \sigma^2_y(-\frac{100 \times irrad_t}{irrad_0^2})^2
+    \label{eq:percentchangeuncertaintyderivation}
+\end{gather*}
+
+\begin{equation}
+    \implies \sigma _F = \sqrt{\sigma^2_x(\frac{100}{irrad_0})^2 + \sigma^2_y(-\frac{100 \times irrad_t}{irrad_0^2})^2}
+    \label{eq:percentchangeuncertainty}
+\end{equation}
+
+
+\noindent where $\sigma _x$ is the precision of $irrad_t$ and $\sigma _y$ is the precision of $irrad_0$, which will be identical in this case as Equation \ref{eq:percentchange} refers to a single emission line. This is the uncertainty corresponding to $dimmingCurve$ and $NonDimmingCurve$. The next step in the algorithm (Figure \ref{flaredimmingdeconvolutionalgorithm}) is to scale the $NonDimmingCurve$ irradiance so that the peaks of the dimming and non-dimming line have the same magnitude (both of which are now in \% units). The derivation for the corresponding uncertainty is, 
+
+\begin{gather*}
+    F = x \times y \\
+    \frac{\partial F}{\partial x} = y , \frac{\partial F}{\partial y} = x
+    \label{eq:scaledbrightcurvederivation}
+\end{gather*}
+
+\begin{equation}
+    \therefore \sigma^2_F = \sigma^2_x y^2 + \sigma^2_y x^2 = \sigma^2_{scaledNonDimmingCurve}
+    \label{eq:scaledbrightcurvestep1}
+\end{equation}
+
+\noindent where $x$ is the non-dimming light curve, $\sigma _x$ is the result of Equation \ref{eq:percentchangeuncertainty} (i.e. the $\sigma _F$ in Equation \ref{eq:percentchangeuncertainty}), $y$ is the scale factor (which is a single value), and $\sigma _y$ is derived as follows: 
+
+\begin{gather*}
+    \text{Let} \frac{d}{b} = \frac{dimCurve_{peak}}{nondimCurve_{peak}} = y \\
+    \sigma^2_y = \sigma^2_d(\frac{1}{b})^2 + \sigma^2_b(-\frac{d}{b^2})^2 \\
+    \therefore \sigma^2_y = (\frac{\sigma _d}{b})^2 + (\frac{\sigma _bd}{b^2})^2
+    \label{eq:scalefactoruncertainty}
+\end{gather*}
+
+Thus we have the $scaledNonDimmingCurve$ and its associated propagated uncertainty. The final step is to apply the correction to the $dimmingCurve$, which is just a simple subtraction with the associated uncertainty: 
+
+\begin{equation}
+    \sigma _{correctedCurve} = \sqrt{\sigma^2_{dimmingCurve} + \sigma^2_{scaledNonDimmingCurve}}
+    \label{eq:correctedcurveuncertainty}
+\end{equation}
+
+
+Figure 3 shows the comparison of the measurement errors and the resultant 1$\sigma$ uncertainties computed by \textit{poly{\_}fit}. The fits achieve the desired effect of reducing uncertainty even further and providing a smooth function to parameterize.
+
+
 
 \section{Dimming and CME Parameterization Results}
 \label{sec:casestudyresults}
