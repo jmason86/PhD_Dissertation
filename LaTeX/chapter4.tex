@@ -343,19 +343,73 @@ Thus we have the $scaledNonDimmingCurve$ and its associated propagated uncertain
     \label{eq:correctedcurveuncertainty}
 \end{equation}
 
+The final resultant uncertainty on the deconvolved dimming is ~$\pm$ 0.175\%\footnote{\%\ here is the same unit as the irradiance, not a percentage of the irradiance value}. Chapter \ref{chapterstatistical} will discuss the passing of the above uncertainty into IDL's \textit{poly{\_}fit} function and the final resultant errors associated with that process. 
 
-Figure 3 shows the comparison of the measurement errors and the resultant 1$\sigma$ uncertainties computed by \textit{poly{\_}fit}. The fits achieve the desired effect of reducing uncertainty even further and providing a smooth function to parameterize.
-
-
-
-\section{Dimming and CME Parameterization Results}
+\section{Dimming Parameterization Results}
 \label{sec:casestudyresults}
 
 \subsection{Simple Dimming Case}
+Parameterization of dimming is focused primarily on slope and depth, both of which are selected by eye. The time to select for these parameters id debatable but in this case, we chose depth to be a point soon after the dimming "floor" is reached in AIA region 1 (red contour and line). Slope was taken to this point, starting from 17:50 UT -- the time just before GOES 1-8 \AA\ and EVE 131 \AA\ began to rise. The deconvolution method (Section \ref{sec:deconvolve}) significantly reduces the impact of the flare’s gradual phase peak to dimming measurements for EVE. Prior to the correction, EVE would have measured a dimming depth of 1.27\% in 171 Å and 0.18\% in 195 Å. After the correction, these values are 2.94\% and 2.09\%, respectively. Similarly, slope was changed from 1\% hr−1 (171 Å) and 0\% hr−1 (195 Å) to 2.29\% hr−1 (171 Å corrected) and 2.09\% hr−1 (195 Å corrected). Furthermore, if this event was being observed in real time, the gradual phase peak makes it impossible to estimate the amount and speed (slope) of dimming accurately. This correction method allows the irradiance increase due to the gradual phase contribution to be compensated in the EVE time series that have dimming.
+
+\begin{figure}[!h]
+    \begin{center}
+	    \includegraphics[width=166mm]{Images/EVECorrectionResults2010Aug7.png}
+    \end{center}
+    \caption[Dimming parameterization for 2010 August 7 event]{
+        Both plots are similar to Figure \ref{flaredimmingdeconvolution} but provide more detail. The left shows results 
+        from 171 \AA\ and the right is for 193 \AA\ (AIA) / 195 \AA\ (EVE). The red vertical arrow indicates the point 
+        where depth is computed and overlaps a blue vertical arrow indicating the end time of slope computation. 
+        The slope range begins at 17:50 UT. 
+   	}
+    \label{fig:parameterization2010aug7}
+\end{figure}
+
+The small difference in time between different emission peaks -- Fe XX peaks 21 minutes before Fe IX in this case -- is information that can be used to understand the temperature evolution during dimming. In this event, that time difference is significantly shorter than the hours-long duration of the total dimming event. Thus, it is unlikely that thermal dimming is a significant contributor to the total observed dimming. Instead, our correction method uses nondimming lines as independent measurements of the flare gradual phase profile. Since no dimming is observed in the nondimming lines, the gradual phase profile is assumed to be pure and can then be used as a proxy to remove only the effect of the gradual phase in the dimming light curve with a minimal impact on total dimming. In this way, we can effectively match AIA dimming observations, which are capable of isolating the flaring coronal loops.
+
+The expectation is that the EVE-corrected dimming results should have the same amount of dimming as the AIA results and are also independent of Fe ionization level (in the dimming lines). Figure \ref{fig:parameterization2010aug7} shows the comparison of EVE-corrected dimming time series to AIA results in both 171 \AA\ and 193/195 \AA, and Table \ref{tab:dimmingresults2010aug7} lists the dimming results. 
+
+\begin{table}[!h]
+    \caption[Key dimming results for 2010 August 7 event]{
+        Key dimming results for 2010 August 7 event. Note that 195 \AA\ in EVE corresponds to the 193 \AA\ band in AIA, 
+        which encompasses 195 \AA. 
+    }
+    \begin{center}
+    \begin{tabular}{|p{1cm}|p{1cm}|p{1.2cm}|p{1.8cm}|p{1.8cm}|p{1.4cm}|p{1.4cm}|p{1.7cm}|p{1.7cm}|} \hline
+	Dim line (\AA) & AIA Total Depth (\%) & AIA Reg. 1 Depth (\%) & EVE Depth Corrected (\%) & EVE Depth Uncorrected (\%) & AIA Total Slope ($\%\ hr^{-1}$) & AIA Rg. 1 slope ($\%\ hr^{-1}$) & EVE Slope Corrected ($\%\ hr^{-1}$) & EVE Slope Uncorrected ($\%\ hr^{-1}$) \\ \hline \hline
+	171 & 2.03 & 3.17 & 2.60 & 1.63 & 1.07 & 1.68 & 1.38 & 0.86 \\ \hline
+	177 & -- & -- & 2.79 & 1.89 & -- & -- & 1.48 & 1.00 \\ \hline
+	180 & -- & -- & 2.87 & 1.98 & -- & -- & 1.52 & 1.05 \\ \hline
+	195 & 1.68 & 2.87 & 2.46 & 1.52 & 0.89 & 1.52 & 1.30 & 0.81 \\ \hline
+	202 & -- & -- & 2.31 & 1.60 & -- & -- & 1.22 & 0.85 \\ \hline
+	211 & 0.52 & 2.03 & 2.57 & 1.60 & 0.28 & 1.50 & 1.36 & 0.85 \\ \hline
+	\end{tabular}
+    \\ \rule{0mm}{5mm}
+    \end{center}
+    \label{tab:dimmingresults2010aug7}
+\end{table} 
+
+AIA Region 1 is considered the reference for mass-loss dimming, so its dimming depth and slope are compared as an estimate of uncertainty for these results from EVE. The differences for the AIA 171 \AA\ and 195 \AA\ dimming depth and slope are 0.3\% and 0.16$\%\ hr^{-1}$, respectively. The relative uncertainty of these is 10\% of the mean depth and slope values, being 3.02\% and 1.60$\%\ hr^{-1}$. These differences in the two different AIA bands could reflect the uncertainty that Region 1 is only due to mass-loss dimming and our ability to identify the best Region 1 boundary to encompass the mass-loss dimming phenomena. However, selecting a slightly different boundary did not greatly impact the resultant light curves, so the difference may be real. This would indicate that AIA too sees shallower dimming for higher ionization states if the deconvolution method described in Section \ref{sec:deconvolve} is not applied. The corrected EVE results for dimming depth and slope have mean values of 2.53\% and 1.34$\%\ hr^{-1}$, and both are 14\% less than the AIA Region 1 mean values. The standard deviations for the six EVE lines’ corrected dimming depth and slope are 0.21\% and 0.11$\%\ hr^{-1}$, respectively. As expected (intended), the EVE corrected results are much more self-consistent with each other than the uncorrected results. The slope tracks the depth variation well; that is, the slope is less when the depth is less. Our expectation was that the slope could represent the CME velocity, and the depth could represent the CME mass loss. 
 
 \subsection{Complex Dimming Case}
 
+\begin{figure}[!h]
+    \begin{center}
+	    \includegraphics[width=166mm]{Images/EveCorrectionResults2011Aug4.png}
+    \end{center}
+    \caption[Dimming parameterization for 2011 August 4 event]{
+        Same as Figure \ref{fig:parameterization2010aug7} but for the 2011 August 4, more complex, case. The AIA regions
+        correspond to those selected in Figure \ref{aia2011aug4newregions}. 
+   	}
+    \label{fig:parameterization2011aug4}
+\end{figure}
+
+The dimming parameterization method in this case was the same as in the simple dimming case above. Figure \ref{fig:parameterization2011aug4} shows the analogous plots for this event. While the general trend of EVE follows AIA, it's clear from these plots that applying the same deconvolution methods does not result in as good a match between EVE and AIA. Note that even uncorrected EVE reaches a deeper minimum than the AIA light curves\footnote{Remember that the black line is the total inside contoured areas in AIA, not the total disk}. The only way for the deconvolution method to raise EVE would be for the nondimming line to have dimming. Since none of the nondimming lines (including 284 \AA) showed dimming in this case, all of the corrected/deconvolved EVE light curves are even lower than the uncorrected EVE dimming line, bringing it further from the AIA "core dimming" light curve (red). Nevertheless, the deconvolution method did successfully remove the flare peak in dimming lines as can be seen in the difference between the raw EVE (gold) and corrected EVE (blue) light curves. AIA showed that the remaining area (i.e. quiet Sun) had non-negligible dimming (black curve in Figure \ref{aia2011aug4} and blue in Figure \ref{aia2011aug4newregions}). Adding that to the AIA total dimming for 171 \AA\ would result in a peak dimming of about 4\%, still 1\% lower than what is seen in EVE. Doing the same for 195 \AA\ would get the two to match within 1\%. The analysis is further complicated by the fact that the AIA bandpasses are several nanometers wide causing blending of many emission lines and continuum that makes direct comparison with EVE difficult, particularly for an event with so many simultaneous physical processes involved, each of which has an impact on the irradiance that can vary through time. 
+
+The ultimate goal of the dimming analysis is to provide proxies for CME mass and velocity. This event was included in the semi-statistical study to determine the relationship between those CME parameters and the dimming depth and slope that will be discussed in Chapter \ref{chapterstatistical}. 
+
+
 \section{Summary}
+To summarize the physical processes taking place in the simpler 2010 August 7 event, the plasma and its irradiance have source and sink terms. Near the beginning of the flare, heating is very dominant and causes a rapid increase in high ionization states for the various Fe emissions. Later in the flare, cooling of the plasma causes an increase in lower ionization states, and those cooler lines peak later than the hot lines. Through it all, the mass ejection can act as a sink for most coronal emissions. Early in the flare, before the low ionization states have been strongly affected by the cooling described above, the mass ejection dominates and causes the irradiance to visibly drop. Much later in the flare process, as the plasma approaches its preflare level, the missing plasma again becomes apparent in the irradiance time series as an hours-long, few-percent decrease.
 
 
 
