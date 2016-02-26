@@ -2,11 +2,43 @@
 \label{chapterbackground}
 
 \section{Brief Tour of the Sun}
-Figure showing all the sections. 
-Figure showing the temperature and density from core to corona. 
-Everything below photosphere is optically thick. 
 
-\paragraph{$\beta$ Parameter}
+\begin{figure}[!h]
+    \begin{center}
+	    \includegraphics[width=100mm]{Images/SunStructureCutAway.png}
+    \end{center}
+    \caption[Sun Structure Cutaway]{
+        Sectional cutaway diagram of the sun to show basic structure. 
+        Figure courtesy of 
+        \href{https://www.flickr.com/photos/11304375@N07/2819311727/}{Image Editor on flickr}
+        
+    }
+    \label{fig:suncutaway}
+\end{figure}
+
+Figure \ref{fig:suncutaway} shows the basic structure of the sun. Nuclear fusion occurs in the core and produces high-energy photons that slowly travel outward through the radiative zone. In every imaginary spherical surface centered on the core, the net energy flux outward must be positive else the sun would explode. In the convection zone, the dominant form of heat transport becomes mass plasma motion that circulates hot matter upward where it cools and sinks back down. At the photosphere, the opacity drops rapidly and photons are free to fly. The undulating chromosphere lies just above the photosphere; it is vastly out-shined by the photosphere except in a few special wavelengths corresponding to dark absorption lines in the photosphere. The transition region is so named for the dramatic and unintuitive temperature increase from the chromosphere to the corona. Through the interior of the sun, the temperature and density steadily drop (see Figure \ref{fig:suntemperaturedensity}) as one would expect from everyday experience, for example, temperature drops further from a campfire. Nevertheless, the transition region escalates the temperature, bringing the corona to ~1 MK. Where the sun below and far above the corona are dominated by gas dynamics, the corona itself is dominated by magnetic fields. This trade-off is characterized by the $\beta$ parameter, defined as: 
+
+\begin{equation}
+    \beta = \frac{p_{gas}}{p_{mag}} = \frac{nk_BT}{B^2/(2\mu_0)}
+\end{equation}
+
+\noindent where $p_{gas}$ is the pressure of a gas (or plasma in this case), $p_{mag}$ is the magnetic pressure, $n$ is the number density, $k_B$ is Boltzmann's constant, $T$ is temperature, $B$ is the strength of the magnetic field, and $\mu_0$ is the permeability of free space. When $\beta > 1$, normal gas pressures dominate and when $\beta < 1$, magnetic pressure dominates. The transition from $\beta > 1$ to $\beta < 1$ is an important one for understanding how vast amounts of energy can be stored in the solar atmosphere, providing the necessary power to drive solar eruptive events. 
+
+The following sections will step through each layer of the sun with descriptive detail proportional to their relevance to the work to be presented in later chapters.  
+
+
+\begin{figure}[!h]
+    \begin{center}
+	    \includegraphics[width=\textwidth]{Images/SolarTemperatureAndDensity.png}
+    \end{center}
+    \caption[Solar Temperature and Density Versus Height]{
+        Solar temperature and density versus height from the core to the corona. Data adapted
+        from various sources. Atmospheric temperature and density from \citet{Eddy1979}, 
+        interior temperature from \citet{Lang2001}, and interior density from  
+        \citet{Christensen-Dalsgaard1996}.         
+    }
+    \label{fig:suntemperaturedensity}
+\end{figure}
 
 \subsection{Core}
 
