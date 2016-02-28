@@ -16,13 +16,14 @@
     \label{fig:suncutaway}
 \end{figure}
 
-Figure \ref{fig:suncutaway} shows the basic structure of the sun. Nuclear fusion occurs in the core and produces high-energy photons that slowly travel outward through the radiative zone. In every imaginary spherical surface centered on the core, the net energy flux outward must be positive else the sun would explode. In the convection zone, the dominant form of heat transport becomes mass plasma motion that circulates hot matter upward where it cools and sinks back down. At the photosphere, the opacity drops rapidly and photons are free to fly. The undulating chromosphere lies just above the photosphere; it is vastly out-shined by the photosphere except in a few special wavelengths corresponding to dark absorption lines in the photosphere. The transition region is so named for the dramatic and unintuitive temperature increase from the chromosphere to the corona. Through the interior of the sun, the temperature and density steadily drop (see Figure \ref{fig:suntemperaturedensity}) as one would expect from everyday experience, for example, temperature drops further from a campfire. Nevertheless, the transition region escalates the temperature, bringing the corona to ~1 MK. Where the sun below and far above the corona are dominated by gas dynamics, the corona itself is dominated by magnetic fields. This trade-off is characterized by the $\beta$ parameter:: 
+Figure \ref{fig:suncutaway} shows the basic structure of the sun. Nuclear fusion occurs in the core and produces high-energy photons that slowly travel outward through the radiative zone. In every imaginary spherical surface centered on the core, the net energy flux outward must be positive else the sun would explode. In the convection zone, the dominant form of heat transport becomes mass plasma motion that circulates hot matter upward where it cools and sinks back down. At the photosphere, the opacity drops rapidly and photons are free to fly. The undulating chromosphere lies just above the photosphere; it is vastly out-shined by the photosphere except in a few special wavelengths corresponding to dark absorption lines in the photosphere. The transition region is so named for the dramatic and unintuitive temperature increase from the chromosphere to the corona. Through the interior of the sun, the temperature and density steadily drop (see Figure \ref{fig:suntemperaturedensity}) as one would expect from everyday experience, for example, temperature drops further from a campfire. Nevertheless, the transition region escalates the temperature, bringing the corona to ~1 MK. Where the sun below and far above the corona are dominated by gas dynamics, the corona itself is dominated by magnetic fields. This trade-off is characterized by the $\beta$ parameter:
 
 \begin{equation}
+    \label{eq:beta}
     \beta = \frac{p_{gas}}{p_{mag}} = \frac{nk_BT}{B^2/(2\mu_0)}
 \end{equation}
 
-\noindent where $p_{gas}$ is the pressure of a gas (or plasma in this case), $p_{mag}$ is the magnetic pressure, $n$ is the number density, $k_B$ is Boltzmann's constant, $T$ is temperature, $B$ is the strength of the magnetic field, and $\mu_0$ is the permeability of free space. When $\beta > 1$, normal gas pressures dominate and when $\beta < 1$, magnetic pressure dominates. The transition from $\beta > 1$ to $\beta < 1$ is an important one for understanding how vast amounts of energy can be stored in the solar atmosphere, providing the necessary power to drive solar eruptive events. 
+\noindent where $p_{gas}$ is the pressure of a gas (or plasma in this case), $p_{mag}$ is the magnetic pressure, $n$ is the number density, $k_B$ is Boltzmann's constant, $T$ is temperature, $B$ is the strength of the magnetic field, and $\mu_0$ is the permeability of free space. When $\beta > 1$, normal gas pressure dominates and when $\beta < 1$, magnetic pressure dominates. The transition from $\beta > 1$ to $\beta < 1$ is an important one for understanding how vast amounts of energy can be stored in the solar atmosphere, providing the necessary power to drive solar eruptive events. $\beta$ as a function of height above the photosphere is shown in Figure \ref{fig:betavsheight}. 
 
 The following sections will step through each layer of the sun with descriptive detail proportional to their relevance to the work to be presented in later chapters. 
 
@@ -39,7 +40,19 @@ The following sections will step through each layer of the sun with descriptive 
     \label{fig:suntemperaturedensity}
 \end{figure}
 
+\begin{figure}[!h]
+    \begin{center}
+	    \includegraphics[width=100mm]{Images/BetaVsHeight.png}
+    \end{center}
+    \caption[Solar Plasma $\beta$ Versus Height]{
+        Solar plasma $\beta$ versus height from the photosphere through the corona. Figure courtesy of
+        \citet{Gary2001}.         
+    }
+    \label{fig:betavsheight}
+\end{figure}
+
 \subsection{Core}
+The gravitational pressure and density in the core of stars is sufficient to ignite nuclear fusion. In a main sequence star at the midpoint of its life, like the sun, the primary fusion reaction is the conversion of hydrogen to helium. The majority of the sun is made of hydrogen (see Figure \ref{fig:sunabundance}) -- a reflection of its relative abundance in the universe at large. Fusion in the core of stars is responsible for producing elements up to iron; the fusion process for elements heavier than iron is endothermic and thus cannot be used by the star to support itself against gravity. Instead, heavier elements are produced during supernovae. Supernovae also spread the source star's fusion products far away where they are incorporated into newly forming stars. Thus, the sun has observable metals\footnote{``metals" here is in the astrophysical sense of any element that is not hydrogen or helium} such as Fe even though it has not reached the point in its life where it produces them itself. The metals in these second and third generation stars are not confined to the core; rather, they can be found even in the corona. In subsequent sections it will become clear that having various elemental species at different stages of ionization in the directly observable solar atmosphere provides a means of determining temperature and structure. 
 
 \begin{figure}[!h]
     \begin{center}
@@ -54,12 +67,75 @@ The following sections will step through each layer of the sun with descriptive 
 \end{figure}
 
 \subsection{Radiative Zone}
+Every nuclear reaction in the core generates high-energy photons. It takes thousands to hundreds of thousands of years for these photons to reach the surface because the incredible density of the solar interior results in a mean free path for photons on the order of centimeters. Because the density decreases with radial distance from the center (blue line in Figure \ref{fig:suntemperaturedensity}), there is a subtle bias in the mean free path of the photons that causes the net direction to be outward. This is the physical process that characterizes the radiative zone. The net outward flux of energy (heat/photons) must be positive else the energy build up would result in an explosion. Additionally, temperature decreases with distance from the center (red line in Figure \ref{fig:suntemperaturedensity}). When in thermodynamic equilibrium, as the solar interior is, atomic emission of photons obeys Planck's law, which describes blackbody emission: 
+
+\begin{equation}
+    \label{eq:planck}
+    S_\lambda = \frac{8\pi hc}{\lambda^5}\frac{1}{e^{hc/\lambda k_BT} - 1}
+\end{equation}
+
+\noindent where $S$ is the spectral radiance of a body at a particular temperature, $\lambda$ is wavelength, $h$ is Planck's constant, $c$ is the speed of light, $k_B$ is Boltzmann's constant, and $T$ is temperature. This equation can be interpreted simply as a lower temperature resulting in lower energy emission (i.e., longer wavelength). Thus, as photons move outward from the core, they are absorbed by atoms at lower temperature and reemitted at longer wavelengths. In order to conserve energy, multiple photons of lower energy must be emitted. All sunlight is essentially an attenuation of the light generated in the fusing core. 
 
 \subsection{Convection Zone}
+At approximately 70\% of the sun's radius, the dominant outward heat transport mechanism changes from radiation to convection. Plasma stores heat near the base of the zone and its buoyancy causes it to rise to a point where its heat can be rapidly dissipated (this point is the photosphere where radiative cooling becomes highly effective). The cooled plasma then sinks back down where it will again be heated at the base of the convection zone, establishing the cycle of heat transport. The observed convective cells at the photosphere are known as granules and supergranules. The difference between them is size and that supergranules have much slower horizontal plasma flow. Additionally, the convection zone is responsible for many of the dynamics observed in the corona (to be described in subsequent sections), which are due to the strong magnetic field and $\beta < 1$ in the corona. The magnetic field is thought to be generated at the base of the convection zone. The precise mechanism of the solar dynamo is not yet well understood, but the surfacing of the field is likely described by slight kinks in the field being lifted by plasma buoyancy (see Figure \ref{fig:magfieldgeneration}). 
+$\beta > 1$ in the convection zone, so the magnetic field generated at the base is subject to the upward plasma motion as just described. Once it reaches the solar atmosphere, the magnetic field dominates and so is not pulled back down with the sinking plasma. 
+
+\begin{figure}[!h]
+    \begin{center}
+	    \includegraphics[width=\textwidth]{Images/MagneticFieldGeneration.png}
+    \end{center}
+    \caption[Surfacing of magnetic field]{
+        (Left) Once the solar dynamo generates a magnetic field vertically around the sun, (middle) differential rotation 
+        of the sun causes the field to wrap around the sun, (right) and any small kinks in the field are lifted by their 
+        buoyancy in an $\Omega$ loop. Figure courtesy of \citet{Lang2001}.       
+    }
+    \label{fig:magfieldgeneration}
+\end{figure}
 
 \subsection{Photosphere}
 
+\begin{figure}[!h]
+    \begin{center}
+	    \includegraphics[width=\textwidth]{Images/WhiteLightAndMagnetogram.png}
+    \end{center}
+    \caption[Sunspots and Active Regions]{
+        (Left) White light image of the solar photosphere on 2012 March 5. (Right) The corresponding photospheric 
+        line-of-sight magnetic field. Black indicates field into the page and white field out of the page. These data
+        come from the Helioseismic Magnetic Imager onboard the Solar Dynamics Observatory spacecraft, to be described
+        in Section \ref{sec:instruments}. 
+    }
+    \label{fig:sunspotsandars}
+\end{figure}
+
+The photosphere is a thin (~300 km or 0.05\% of the solar radius) layer where the opacity suddenly drops and photons can escape to space more or less unscathed. It is often referred to as the ``surface" of the sun but this label can be misleading since the density at the photosphere is ~2500 more tenuous than the \textit{air} on top Mount Everest. The photosphere is constantly roiling; the lifetime of a granule is only about 8 minutes and large-scale patterns of supergranules last about 24 hours. In each granule, hot plasma rises at the center and sinks at the edges. Magnetic field is collected at the edges of the supergranules as plasma motion can move magnetic field in the photosphere. Sunspots, concentrated dark regions in photospheric white light\footnote{``white light" refers to the integrated visible spectrum emission}, correspond to regions of concentrated magnetic field. In these locations, magnetic pressure alleviates some of the gas pressure, which lowers the temperature (see numerator of Equation \ref{eq:beta}), and thus the emission peak and intensity decrease according to Planck's law (Equation \ref{eq:planck}). These areas are known as active regions when viewed in magnetogram data (see Figure \ref{fig:sunspotsandars}) and are the primary source for solar eruptive events (see Section \ref{sec:physicssolareruptiveevents}). 
+
 \subsection{Chromosphere}
+
+\begin{figure}[!h]
+    \begin{center}
+	    \includegraphics[width=120mm]{Images/Spicules.png}
+    \end{center}
+    \caption[Spicules of the Chromosphere]{
+        Chromospheric spicules visible on the limb\footnote{``limb" is a commonly used term for the edge
+        of the sun}of the sun, imaged in H$\alpha$. This photo was taken by an amateur astronomer from the ground, 
+        Maxim Usatov. 
+    }
+    \label{fig:spicules}
+\end{figure}
+
+The chromosphere is an irregular ``layer" of the sun that mostly consists of small jets known as spicules (Figure \ref{fig:spicules}). The chromosphere was initially discovered and only observable during natural solar eclipses for a few seconds around totality when the bright photosphere was blocked. The layer has a dominant red color, which guided the selection of its name (``chromo" comes from the Greek word for color). The red light comes primarily from H$\alpha$ emission. H$\alpha$ comes from the $n = 3\rightarrow 2$ transition of hydrogen (Figure \ref{fig:balmerandlyman}). The next section will go into the details of electromagnetic radiation, including this type of bound-bound emission. Instruments can use filters to select this particular wavelength, making observation of the chromosphere routine and independent of solar eclipses. 
+
+\begin{figure}[!h]
+    \begin{center}
+	    \includegraphics[width=80mm]{Images/HydrogenTransitions.png}
+    \end{center}
+    \caption[Atomic Transitions for Balmer and Lyman Series]{
+        Diagram of the hydrogen atom, with electronic orbitals labeled (n). Two important transition series are 
+        identified: the Balmer series which includes transitions ending at n = 2 and the Lyman series with 
+        transitions ending at n = 1. The wavelength and common name for the resultant photon emission are also labeled. 
+    }
+    \label{fig:balmerandlyman}
+\end{figure}
 
 \subsection{Review of Electromagnetic Radiation From Atoms and Charged Particles}
 
@@ -95,6 +171,7 @@ The following sections will step through each layer of the sun with descriptive 
 \subsection{Heliosphere}
 
 \section{Physics of Solar Eruptive Events}
+\label{sec:physicssolareruptiveevents}
 
 \subsection{Magnetic Energy Storage}
 
@@ -107,16 +184,11 @@ The following sections will step through each layer of the sun with descriptive 
 \section{Space Weather}
 
 \section{Instrument Descriptions}
+\label{sec:instruments}
 
 \subsection{Spectrographs}
 
 \subsection{Spectral Imagers}
-
-\subsection{Coronagraphs}
-
-\subsection{In-situ Measurements}
-
-
 
 \begin{figure}[!h]
     \begin{center}
@@ -127,3 +199,12 @@ The following sections will step through each layer of the sun with descriptive 
 	}
     \label{aiabandpasses}
 \end{figure}
+
+\subsection{Magnetic Imagers}
+
+\subsection{Coronagraphs}
+
+\subsection{In-situ Measurements}
+
+
+
