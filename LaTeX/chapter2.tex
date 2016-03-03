@@ -198,10 +198,60 @@ The next most common method for temperature determination uses the ratio of two 
 The mechanism responsible for the rapid temperature change through the transition region remains poorly understood and is one of the biggest problems in solar physics. Theories abound to explain it but are beyond the scope of this dissertation. Here, we simply accept that the transition region \textit{does} lead to a much hotter corona, an observational fact that has long been established. 
 
 \subsection{Thermodynamic Equilibrium} 
+A large, dynamic body such as the sun shouldn't be expected to be in thermodynamic equilibrium everywhere. The term ``local thermodynamic equilibrium (LTE)" appreciates this. There are many volumes of the sun where the laws and conveniences of thermodynamic equilibrium can be applied. LTE is a good assumption when three basic criteria are met: the electron and ion velocity distribution is Maxwellian, the plasma is only weakly ionized such that the Saha equation holds, and collisional excitation dominates radiative such that the Boltzmann equation can be applied. 
+
+The Maxwell-Boltzmann equation describes the velocity distribution of a population of particles: 
+
+\begin{equation}
+    \label{eq:maxwellboltzmann}
+    f(v) = \sqrtsign{\left(\frac{m}{2\pi k_BT} \right)^3} 4\pi v^2 e^{-\frac{mv^2}{2k_BT}}
+\end{equation}
+
+\noindent where $f$ is the probability density function, $v$ is velocity, $m$ is particle mass, $k_B$ is Boltzmann's constant, and $T$ is temperature. This is a valid description for processes involving only continuum emission (free-free and free-bound) and is usually valid for atoms and ions in the sun. Particle acceleration during solar flares can push a population of electrons and ions outside of the Maxwellian distribution. The Saha equation describes the ionization state of a plasma as a function of temperature and pressure: 
+
+\begin{equation}
+    \label{eq:saha}
+    \frac{n_{i+1}n_e}{n_i} = \frac{2g_{i+1}}{\Lambda^3 g_i} e^{-\frac{\epsilon_{i+1} - \epsilon_i}{k_BT}}
+\end{equation}
+
+\noindent where $n_i$ is the number density of ions in the $i-th$ ionization state, $n_e$ is the number density of electrons, $\Lambda$ is the deBroglie wavelength, $g_i$ is the degeneracy of states for the i-ions, and $\epsilon_i$ is the energy to remove $i$ ions from the neutral atom. In the solar atmosphere, the low-lying atomic levels are dominated by radiative ionization while the high levels are dominated by collisional ionization when the temperature and density are high. The Saha equation is valid when collisions dominate the overall plasma or when the radiation field is Planckian (Equation \ref{eq:planck}). The Boltzmann equation (not to be confused with the Maxwell-Boltzmann equation) describes the excitation distribution of electrons in an atom: 
+
+\begin{equation}
+    \label{eq:boltzmann}
+    f(i) = \frac{e^{-\epsilon_i / k_BT}}{\sum_{i=1}^M e^{-\epsilon_i / k_BT} }
+\end{equation}
+
+\noindent where $M$ is the number of all states accessible to the system and all other terms are as defined previously. The Boltzmann equation is valid when collisions dominate excitation as compared to radiative excitation. The inherent simplifying assumption is that the excitation state depends only on the temperature and density of the plasma. This is not true in general so the assumption of LTE must be applied carefully. When LTE does hold, the distribution of thermally emitted photons is described by the Planck equation (Equation \ref{eq:planck}) . Non-LTE analyses must account for the fact that the radiation field also impacts the population of electrons in atomic energy states. 
 
 \subsection{Corona}
 
+\begin{figure}[!h]
+    \begin{center}
+	    \includegraphics[width=100mm]{Images/CoronaWhiteLight.png}
+    \end{center}
+    \caption[Corona in White Light]{
+        Composite white-light image of the corona from a total solar eclipse in the Marshall Islands in 2009 July. 
+        Feature on the moon can be seen in the foreground and a great deal of structure appears in the corona. 
+        Image courtesy of Miloslav Druckmuller. 
+    }
+    \label{fig:coronawhitelight}
+\end{figure}
+
+The corona is the highly dynamic, tenuous upper atmosphere of the sun. Its lower boundary is defined by the transition region at approximately $2.45 \times 10^5$ km ($1.35 R_\odot$). Its outer boundary is determined by the Alfvén surface where information can no longer be propagated inward and has recently been discovered to be at a much higher altitude than previously thought: $8.35 \times 10^6$ km ($12 R_\odot$) above polar coronal holes and $1.04 \times 10^7$ km ($15 R_\odot$) at lower latitudes \citep{DeForest2014}. The average temperature of the corona is about 1.5 MK (Figure \ref{fig:suntemperaturedensity}) but it ranges from roughly $6.00 \times 10^5$ K to $5.00 \times 10^7$ K. As mentioned in earlier sections, the ratio of gas to magnetic pressure, $\beta$, is less than 1 in the corona. This is why the we see structure in the corona. The magnetic field contorts, compresses, and opens dynamically to produce regions of varying plasma density and temperature (Figure \ref{fig:coronawhitelight}). Those changes in the plasma impact the electromagnetic emission in terms of the emission line flux and differential emission measure (DEM): 
+
+\begin{gather}
+    \label{eq:emissionmeasure}
+    F = \frac{2.2 \times 10^{-15}}{4\pi R^2}fA_{el} \int gG(T)Q(T)dT \\
+    G(T) = \frac{n_{ion}}{n_{el}}\frac{e^{\frac{-h\nu}{k_BT}}}{\sqrtsign{T}} \\
+    Q(T) = \sum_{i=1}^N \left(\iint_{S_T} \frac{n_e n_i}{\left|\nabla T\right|} dS_T \right)_i
+\end{gather}
+
+\noindent where $F$ is the emission line flux, $G(T)$ is the contribution function, $Q(T)$ is the DEM; $R$ is the distance between the emission and the observer, $f$ is the oscillator strength (probability of absorption/emission between two atomic energy levels), $A_{el}$ is the elemental abundance, $g$ is the Gaunt factor (a correction for absorption/emission to account for quantum effects), $\nu$ is photon frequency, $S_T$ is a constant temperature surface, the summation in $Q(T)$ runs across all regions along the line of sight in the temperature range $T$ to $T + \Delta T$, and all other variables are as defined previously. The DEM, and hence the line flux, is strongly dependent on density and moderately dependent on temperature. All of this is to say that where the coronal magnetic field increases the density or temperature of the plasma, the intensity of the emission goes up; thus, images of the corona tend to show bright structures that provide an indicator of magnetic topology and intensity. 
+
+The corona is optically thin and as such is not in LTE, i.e., the plasma is not strongly locally coupled to the radiation field. In yet simpler terms, this means that photons generated from a very distant region can stream directly to a plasma parcel of interest and interact there. This makes modeling of the solar atmosphere a nontrivial task. There should be different temperatures defined for photons, electrons, protons, and ions. Their velocities need not be Maxwellian, making the definition of temperature at all somewhat murky. However, many of the emission lines in the corona are emitted by collisionally excited, highly ionized atoms (e.g., Fe IX 171 \AA) and these lines can only be formed above certain temperatures. In regions of the corona that are relatively quiescent, the assumption of a Maxwellian distribution remains a good one, so temperature carries some meaning. Thus, observations of particular emission lines still provide a decent indicator of approximate plasma temperature. Herein, ``peak formation temperature" or simply ``temperature" will be used as a convenient shorthand that implies the caveats provided above. 
+
 \subsection{Heliosphere}
+The heliosphere stretches from the end of the corona and encompasses the solar system. It is the region where solar influences dominate the interstellar. Solar wind, a tenuous plasma constantly streaming out from the sun, applying a subtle outward pressure. There are similar breezes coming from the stars. The heliopause is defined as the point of equilibrium between these pressures. The solar wind flows outward at about 400 km/s with a pressure at 1 astronomical unit (AU\footnote{1 AU is the average distance between the sun and earth, $1.50 \times 10^8$ km}) in the range of $1 \times 10^{-9}$  N/m$^2$ to $6 \times 10^{-9}$ N/m$^2$. However, this gentle wind is periodically disturbed by spasms in the sun known as solar eruptive events. These events can impact the earth and cause various problems with technology, health, and safety. The physics of solar eruptive events is the subject of Section \ref{sec:physicssolareruptiveevents} and the impacts and forecasting of space weather is the subject of Section \ref{sec:spaceweather}. 
 
 \section{Physics of Solar Eruptive Events}
 \label{sec:physicssolareruptiveevents}
@@ -215,6 +265,7 @@ The mechanism responsible for the rapid temperature change through the transitio
 \subsection{Coronal Mass Ejections}
 
 \section{Space Weather}
+\label{sec:spaceweather}
 
 \section{Instrument Descriptions}
 \label{sec:instruments}
