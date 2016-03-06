@@ -10,7 +10,7 @@
     \caption[Sun Structure Cutaway]{
         Sectional cutaway diagram of the sun to show basic structure. 
         Figure courtesy of 
-        \href{https://www.flickr.com/photos/11304375@N07/2819311727/}{Image Editor on flickr}
+        \href{https://www.flickr.com/photos/11304375@N07/2819311727/}{Image Editor on flickr.}
         
     }
     \label{fig:suncutaway}
@@ -102,8 +102,7 @@ $\beta > 1$ in the convection zone, so the magnetic field generated at the base 
     \caption[Sunspots and Active Regions]{
         (Left) White light image of the solar photosphere on 2012 March 5. (Right) The corresponding photospheric 
         line-of-sight magnetic field. Black indicates field into the page and white field out of the page. These data
-        come from the Helioseismic Magnetic Imager onboard the Solar Dynamics Observatory spacecraft, to be described
-        in Section \ref{sec:instruments}. 
+        come from the Helioseismic Magnetic Imager onboard the Solar Dynamics Observatory spacecraft. 
     }
     \label{fig:sunspotsandars}
 \end{figure}
@@ -276,40 +275,97 @@ The energy to power a solar eruptive event comes from stored energy in the coron
 \subsection{Energy Release Overview}
 The rapid energy release of a solar eruptive event is no small topic. As mentioned earlier, worldwide energy consumption pales in comparison to the energy release of a single solar eruptive event and as such, a large number of physical processes are powered. Magnetic reconnection is the widely accepted mechanism that triggers the sudden energy release, though the microphysics remain poorly understood. Magnetic reconnection also occurs in planetary magnetospheres and laboratory experiments have sought to cause it, but the details of this active area of research are beyond the scope of the relevant background to this dissertation. Magnetic energy storage and reconnection is somewhat analogous to the sudden shifting of tectonic plates (earthquakes), avalanches on a ski slope, the snapping of a rubber band that has been twisted too tightly, and the sudden flash and crack of a lightning bolt \citep{Lang2001}. 
 
-As energy continues to build in the coronal magnetic field, eventually somewhere in the complex of loops, a particular strand is stressed beyond a critical limit. Because it can no longer adjust to the additional stress, it suddenly snaps into a new lower-energy configuration as it finds the path of least resistance like a stream of water working its way through rough downhill terrain. This sudden change to the local field configuration causes the neighboring loops to adjust rapidly as well and in this way the disturbance propagates. WIthin seconds, all loops in the region are relieving their strain by reducing their twists, shear, and other complexity as they strive toward the nonpotential field configuration. Eventually, a region of loops is reached that are not near their critical stress limit and the propagation ceases. The field configuration after the disturbance contains less energy than before. All of that energy has to go somewhere! It turns out that particle acceleration is one of the key processes powered by this energy release. A comparative few particles can be accelerated to relativistic velocities and/or a huge mass of particles can be accelerated to a few hundred km/s. The former is strongly associated with solar flares (Section \ref{sec:solarflares}) and solar energetic particles (SEPs; not discussed in detail here) while the latter is a simple description of coronal mass ejections (Section \ref{sec:cmes}). Both are manifestations of magnetic energy release and they can occur together. Flares are often categorized by the amount of soft x-ray emission they release as measured by the Geostationary Operational Environmental Satellites (GOES) where each letter (A, B, C, M, X) indicates an increased order of magnitude. $\sim$30\% of C-class, $\sim$56\% of M-class, and $\sim$90\% of X-class flares occur with CMEs \citep{Yashiro2005, Wang2007}. Thus, larger magnitude flares tend to also have CMEs. The reverse is also true: 90\% of the fastest CMEs (> 1500 km/s) are associated with flares while the association rate drops for slower CMEs \citep{Wang2008}. 
+As energy continues to build in the coronal magnetic field, eventually somewhere in the complex of loops, a particular strand is stressed beyond a critical limit. Because it can no longer adjust to the additional stress, it suddenly snaps into a new lower-energy configuration as it finds the path of least resistance like a stream of water working its way through rough downhill terrain. This sudden change to the local field configuration causes the neighboring loops to adjust rapidly as well and in this way the disturbance propagates. WIthin seconds, all loops in the region are relieving their strain by reducing their twists, shear, and other complexity as they strive toward the nonpotential field configuration. Eventually, a region of loops is reached that are not near their critical stress limit and the propagation ceases. The field configuration after the disturbance contains less energy than before. All of that energy has to go somewhere! It turns out that particle acceleration is one of the key processes powered by this energy release. A comparative few particles can be accelerated to relativistic velocities and/or a huge mass of particles can be accelerated to a few hundred km/s. The former is strongly associated with solar flares (Section \ref{sec:solarflares}) and solar energetic particles (SEPs; not discussed in detail here) while the latter is a simple description of coronal mass ejections (Section \ref{sec:cmes}). Both are manifestations of magnetic energy release and they can occur together. Flares are often categorized by the amount of soft x-ray emission they release as measured by the Geostationary Operational Environmental Satellites (GOES) where each letter (A, B, C, M, X) indicates an increased order of magnitude. $\sim$30\% of C-class, $\sim$56\% of M-class, and $\sim$90\% of X-class flares occur with CMEs \citep{Yashiro2005, Wang2007}. Thus, larger magnitude flares tend to also have CMEs. The reverse is also true: 90\% of the fastest CMEs (\textgreater 1500 km/s) are associated with flares while the association rate drops for slower CMEs \citep{Wang2008}. 
 
 \subsection{Solar Flares}
 \label{sec:solarflares}
-TODO: Start here -- add figure
+
+\begin{figure}[!h]
+    \begin{center}
+	    \includegraphics[width=100mm]{Images/SolarFlareSchematic.png}
+    \end{center}
+    \caption[Solar Flare Schematic]{
+        Schematic depiction of solar flare energy release processes. Figure courtesy of \citet{Lang2001}.
+    }
+    \label{fig:solarflareschematic}
+\end{figure}
+
+``Solar flare" is a somewhat vague term that broadly encompasses all of the rapid magnetic energy release processes that result in electromagnetic radiation (Figure \ref{fig:solarflareschematic}). One natural place for some of the energy to go is Joule heating. This is a process where electrons are accelerated by an electric field and collide with relatively stationary ions causing them to scatter randomly (though still in a Maxwellian distribution), thus increasing the average kinetic energy of the system (i.e., heating). Particle acceleration in flares is poorly understood but there are numerous proposed mechanisms that could produce electron and ion beams. Each proposed mechanism has issues and the existing observations have not placed sufficient constraints to determine which mechanism dominates for various physical conditions \citep{Kontar2011, Zharkova2011}. The observations do tell us that acceleration occurs near or above the top of the coronal loops. Some particles are accelerated outward (SEPs) and others are accelerated downward. 
+
+Electrons and ions that are accelerated downward are trapped by magnetic field because $\beta < 1$, so they run down the legs of the coronal loops until they reach the relatively dense chromosphere. At this point, numerous physical processes ignite. As the non-thermal\footnote{Non-thermal implies that the velocity distribution is not Maxwellian} charged particles in the beam approach the plasma in the chromosphere, their electromagnetic attraction/repulsion causes acceleration, which results in bremsstrahlung continuum radiation. Sometimes the particles in the beam collide with the chromospheric particles, which results in direct heating, ionization, atomic excitation of electrons, and atomic excitation of the nucleus. Electrons that become excited but remain bound may then spontaneously decay in a bound-bound transition by emitting a photon (often in SXR or EUV). Alternatively, the excited atom may collisionally de-excite -- another heating mechanism. Heating in the chromosphere causes the plasma to rapidly expand and because $\beta < 1$, it expands up the legs of the coronal loops. Those loops then appear bright in SXR and EUV wavelengths (Figure \ref{fig:flaresxrhxr}). These processes tend to generate a multitude of high energy emission, from UV to gamma, and also microwave emission at the characteristic plasma frequency as the electron beam causes a small oscillation in the elements of the target plasma. Because the corona is optically thin, we are able to directly observe these emissions. 
+
+\begin{figure}[!h]
+    \begin{center}
+	    \includegraphics[width=\textwidth]{Images/FlareInSXRAndHXR.png}
+    \end{center}
+    \caption[Solar Flare In Soft and Hard X-rays]{
+        (Left) SXR image of the sun during a flare on 1992 January 13. (Right) The flaring loops in SXR and HXR 
+        wavelengths. Images from instruments onboard the Yohkoh spacecraft. Figure courtesy of \citet{Holman2008}. 
+    }
+    \label{fig:flaresxrhxr}
+\end{figure}
+
+The HXRs and microwave emission tend to cease within minutes as the electron beam stops. The period that these emissions persist is known as the impulsive phase of the flare. The gradual phase is essentially the atmospheric response to the disturbance of the impulsive phase; the hot plasma (upwards of 50 MK) cools and lower ionization states see an enhancement. Those lower ionization states radiate, which makes them observable and contributes to the cooling of the plasma. Highly relevant to the following chapters, many of the gradual phase emission lines are in the EUV. 
 
 \subsection{Coronal Mass Ejections}
 \label{sec:cmes}
 
+\begin{figure}[!h]
+    \begin{center}
+	    \includegraphics[width=\textwidth]{Images/CMESchematic.png}
+    \end{center}
+    \caption[Coronal Mass Ejection Schematic]{
+        (Left) Typical observation of a CME. (Right) Schematic depiction of filament eruption CME. 
+        Figure courtesy of \citet{Forbes2000}.
+    }
+    \label{fig:cmeschematic}
+\end{figure}
+
+Energy stored in the coronal magnetic field can also be directed into accelerating a great mass to escape velocity and beyond. Prior to the flare, the strong magnetic fields of the active region in a low $\beta$ environment can prevent a great mass of plasma from escaping, despite the strong outward plasma pressure of the solar wind. The sudden reconfiguration of the magnetic field changes that situation: the restraining magnetic field can be disconnected from lower down, effectively pinching off a magnetic bubble (Figure \ref{fig:cmeschematic}). Often times, highly-stable plasma features can be found resting in regions of strong magnetic field, which tend to be in and near active regions (Figure \ref{fig:cmeschematic}). These features are called filaments when seen on disk because they appear dark, and prominences when view towering over the solar limb. Filaments/prominences have orders of magnitude higher density than their surroundings but are at orders of magnitude lower temperature. They should sink like a brick in water or evaporate like an ice cube in an oven but they are supported and protected by the strong magnetic fields encapsulating them. When a CME departs, often times a filament/prominence that was a part of the local magnetic structure will be torn away with it. This adds to the mass of the CME and can make for beautiful images (Figure \ref{fig:prominenceeruption}). Here too, the precise mechanism for accelerating the CME is poorly understood. It is particularly perplexing because the average speed of a CME is 400 km/s but the escape velocity at sun is about 618 km/s. What is relevant for this dissertation is that as the CME leaves, it brings its emission with it, leaving a temporary void in the corona. ``Transient coronal holes" are now known as coronal dimmings and these will be the focus of Chapters \ref{chaptermechanisms}-\ref{chapterstatistical}. 
+
+\begin{figure}[!h]
+    \begin{center}
+	    \includegraphics[width=100mm]{Images/ProminenceEruption.png}
+    \end{center}
+    \caption[Prominence Eruption]{
+        Prominence eruption as viewed from the Solar Dynamics Observatory's Atmospheric Imaging Assembly. Image credit:
+        NASA. 
+    }
+    \label{fig:prominenceeruption}
+\end{figure}
+
 \section{Space Weather}
 \label{sec:spaceweather}
+If solar eruptive events are directed toward Earth, there can by myriad negative consequences \citep{NRC2008}, which provides some practical motivation to study the responsible events beyond their scientific curiousness. The \citet{NRC2008} report is the definitive source for space weather impacts so only a few examples will be listed here. The electromagnetic radiation from solar flares is absorbed by the earth's atmosphere, which can cause it to expand. Satellites at a particular altitude will then see a greater number of particles in their path and thus experience a small but non-negligible increase to their drag. The gross effect is that the orbital lifetime of satellites in low Earth orbit is reduced, unless they have the capability to boost themselves as the International Space Station does periodically. Additionally, high energy photons, electrons, and protons can be directly absorbed by satellites or humans in space. This can cause numerous problems with electronics and health. In particular, solar storms can cause disruptions to the global positioning satellite system. This is an inconvenience to people on travel in unfamiliar places, but has serious implications for the agricultural and drilling industries that increasingly rely on GPS for precise positioning in their automated systems. Coronal mass ejections are clouds of electrically charged plasma that influences the earth's magnetosphere. According to Maxwell's equations, a changing magnetic field induces a current. Long oil pipelines and power lines are particularly susceptible to this because they are good electrical conductors. In the case of power lines, the surges in current can exceed the limits of tolerance on large transformers and blow them out. These transformers are expensive and have long lead times to replace; thus large populations can be left without power for extended periods of time, as was the case in Quebec in 1989. Finally, the earth's ionosphere can be influenced by solar eruptive events, causing disruptions in radio communication that rely on the ionosphere to bounce signals over long distances. This has important implications for the airline industry because airplanes are required to maintain constant contact with the ground. In relatively inaccessible areas like the poles and the oceans, they rely on the ionosphere to maintain contact. Thus, when ionospheric disturbance disrupt an airlines ability to maintain contact, they are forced to reroute flights. Many of the human implications of space weather can be mitigated with warning. For example, astronauts can take shelter, satellites can be temporarily powered down or put in safe mode, and transformers can be protected from current surges. 
+
+It remains difficult to predict when solar eruptive events will occur. One popular method uses photospheric magnetic field measurements to derive parameters tied to field complexity (e.g., emerging flux, polarity inversion line length, magnetic field gradients), which are proxies for the amount of stored energy in the magnetic field. These data are then used to make forecasts of solar flares but while they show a positive correlation to solar flare occurrence and magnitude, they have not proven particularly effective for real-time prediction \citep{Mason2010}. Fortunately, CMEs are the more geoeffective type of solar eruptive event and they take several hours to a few days to reach 1 AU. This makes nowcasting possible because the light from CMEs only takes 8 minutes to reach the same distance. An industry has sprung up around the monitoring of real-time data from various space-weather assets, and they issue alerts to other industries that may be impacted. The true test of any science is its ability to make accurate and precise predictions. The sun may be the most well studied star in the universe, but there remains ample room for improvement in our understanding of its details and our observations of it. 
 
 \section{Instrument Descriptions}
 \label{sec:instruments}
 
+The following subsections are broken into instrument types. Only instruments that are important for this dissertation are described. Of primary importance for this dissertation is the Solar Dynamics Observatory's Extreme Ultraviolet Variability Experiment spectrograph, so it will be described first. 
+
 \subsection{Spectrographs}
+The Extreme Ultraviolet (EUV) Variability Experiment (EVE; \citealt{Woods2012}) onboard the Solar Dynamics Observatory (SDO; \citealt{Pesnell2012}) was launched on 2010 February 11 into a geosynchronous orbit that has a view of the sun that is only occasionally obstructed by the earth. EVE is a suite of instruments that measure SXR and EUV emission from the sun (Figure \ref{fig:aiabandpasses}). Of primary interest to this dissertation is the Multiple EUV Grating Spectrographs (MEGS)-A, which is a grazing-incidence spectrograph that obtains 1 \AA\ resolution spectra from 50 to 370 \AA\ every 10 seconds. This range contains all of the emission lines listed in Table \ref{tab:emissionlines}, which are imaged on two charge coupled devices (CCDs), thus reducing cross-calibration concerns to a near minimum. The spectral resolution is sufficiently high that emission line blends are few and do not impact the analyses to come in the following chapters. However, as an irradiance instrument, EVE has no spatial resolution. 
+
+The modified Amptek X123 silicon drift detector onboard MinXSS is a spectrometer to observe SXRs. It will be described in Chapter \ref{chapterminxssoverview}. 
 
 \subsection{Spectral Imagers}
+Also onboard SDO is the Atmospheric Imaging Assembly (AIA; \citealt{Lemen2012}). AIA consists of seven EUV channels from four telescopes. The full solar disk is observed and the light is imaged onto 4096 x 4096 CCDs every 12 seconds. The spatial resolution of 1.5 arcsec translates to about 1000 km at the sun. AIA uses filters to select bandpasses, most of which are in the EUV and complement EVE data. The filters have bandpasses that are several nanometers wide, which results in spectral line blending. Spectral-line blends in this case result in degeneracy in temperature space. For example, if a pixel in the 171 \AA\ bandpass becomes bright, it is not known if that is due to an enhancement in Fe IX or Fe X. The sharpness of the bandpass for this particular bandpass helps mitigate this issue, but as can be seen in Figure \ref{fig:aiabandpasses}, some of the bandpasses cover a wide range of wavelengths, which can make temperature diagnostics difficult. Fortunately, analyses can leverage AIA and EVE data together to gain an improved understanding of solar plasma in terms of space, time, and temperature. 
 
 \begin{figure}[!h]
     \begin{center}
-	    \includegraphics[width=166mm]{Images/AiaBandpasses.png}
+	    \includegraphics[width=\textwidth]{Images/AiaBandpasses.png}
     \end{center}
     \caption[AIA bandpasses]{
-	    AIA bandpasses, model solar spectrum to provide an idea of the amount of blending. 
+	    The AIA bandpasses with an example EVE solar spectrum to provide an idea of the amount of blending. 
+	    Some emission lines are labeled with their corresponding ion. 
 	}
-    \label{aiabandpasses}
+    \label{fig:aiabandpasses}
 \end{figure}
 
-\subsection{Magnetic Imagers}
-
 \subsection{Coronagraphs}
+Coronagraphs are instruments that block out the bright photosphere to observe the corona, just as rare total solar eclipses do. The Solar and Heliospheric Observatory (SOHO; \citealt{Domingo1995}) has a coronagraph onboard -- the Large Angle Spectroscopic Coronagraph (LASCO; \citealt{Brueckner1995}). SOHO was launched 1995 December 2 to the Earth-Sun first Lagrange point, which is always between the earth and sun (though still much closer to the earth). LASCO contains three coronagraphs with different fields of view. Only C2 (1.5 - 6 R$_\odot$) and C3 (3.7 - 30 R$_\odot$) have remained in operation through the present era when SDO became available. LASCO and other coronagraphs observe white light from the corona that has been Thomson scattered by the numerous electrons in the fully-ionized and hydrogen-dominated corona. This makes them ideal for observing coronal mass ejections. 
 
-\subsection{In-situ Measurements}
-
-
+The Solar Terrestrial Relations Observatory (STEREO; \citealt{Kaiser2007}) contains an instrument similar to LASCO, two Lyot coronagraphs (COR1 and COR2; \citealt{Howard2008}). COR1 has a field of view from 1.5 - 4 R$_\odot$ and COR2 from 2.5 - 15 R$_\odot$. The STEREO mission has two identical spacecraft that were launched on 2006 October 26; one is slightly inside Earth's orbit and thus travels further and further ahead of the earth, and the other is slightly outside Earth's orbit so falls behind the Earth. The increasing distance to these spacecraft means the communications bandwidth is always diminishing, so the resolution and cadence of COR and the other instruments could not be as high as high as the imaging technology at the time could have made them. Nevertheless, the instruments onboard STEREO provide truly unique possibilities for data analysis. In particular, the geometry of CMEs can be better determined by using STEREO/COR in conjunction with each other and/or with LASCO. This means that CME direction can be determined less ambiguously and thus a ``true-space" velocity computed. 
 
