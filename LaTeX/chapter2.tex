@@ -1,7 +1,97 @@
 \chapter{Relevant Background}
 \label{chapterbackground}
 
+This chapter first introduces some of the physics that understanding of the subsequent chapters rely on. Various atomic and charged particle mechanisms that generate electromagnetic radiation are described because these are the fundamental processes responsible for the generation of the photons that instruments observe and also serve as an important heat transport mechanism. Additionally, the conditions required for thermodynamic equilibrium are discussed because some regimes of the sun obey the corresponding mathematical descriptions while others do not. It turns out that non-local thermodynamic equilibrium processes do not strongly influence the results of later chapters, but it would be negligent not to acknowledge the inherent assumptions made and the care that must be taken. 
+
+Section \ref{sec:tour} provides a brief tour of the sun from its center to the heliosphere encompassing the solar system. The basic physics previously outlined underlies much of the discussion here. Section \ref{sec:physicssolareruptiveevents} delves a little deeper into the physics of solar eruptive events. Section \ref{sec:spaceweather} briefly discusses the practical implications of solar eruptive events, namely space weather and its detrimental influences on human technology. Finally, Section \ref{sec:instruments} provides descriptions of the instruments that are critical components of the analyses in later chapters. 
+
+\section{Relevant Basic Physics}
+
+\subsection{Electromagnetic Radiation From Atoms and Charged Particles}
+There are three basic types of electromagnetic radiation that are emitted by electron interaction with atoms: bound-bound, free-bound, and free-free. Additionally, nuclei can emit photons. 
+
+\paragraph{Bound-bound}
+When an electron transitions from one orbital energy of an atom to a lower one, a photon is emitted with energy equal to that of the transition. Downward energy transitions can occur spontaneously or through a collisional de-excitation, where the atom impacts another particle and transfers some of its energy to the other particle. Upward energy transitions can also occur through collision or by absorption of a photon. The wavelength of the emitted photon is primarily determined by the electronic energy transition but can also be influenced by numerous other processes. For example, the strength of the surrounding magnetic field (Zeeman splitting), collisions during the energy transition, and the relative line-of-sight velocity of the atom with respect to the observer (Doppler) all influence the final wavelength of a photon emitted from a bound-bound transition. These and other effects result in line broadening, sometimes to the point of splitting the lines. 
+
+\paragraph{Free-bound}
+Also known as radiative recombination, free-bound transitions are those where an atom captures a free electron. When a free electron is captured, a photon is emitted with energy equal to the difference between the kinetic energy of the free electron and the energy of the bound atomic state. The orbitals of the atom have discrete (quantized) energy values but the kinetic energy of free electrons exists on a continuum. Thus light from free-bound transitions is also a continuum in wavelength though it has a lower limit defined by the energy of the bound state it is captured into. The reverse process (bound-free) is ionization and occurs when a photon is absorbed by an atom and an electron is liberated. 
+
+\paragraph{Free-free}
+Also known as Bremsstrahlung (``braking radiation"), any accelerating charged particle emits photons according to Maxwell's equations. The resultant emission is on a continuum because there are no quantum constraints on the kinetic energy of free particles before or after an acceleration event. Because electrons are much less massive than nuclei, they tend to experience many changes in direction and speed in a dynamic plasma. Even the lightest nucleus -- hydrogen, which is just a proton -- is 1836 times heavier than an electron. So, while the nucleus will also experience a change in kinetic energy, it is negligible compared to the electron's. The acceleration in this case is mediated through the powerful electromagnetic force between these oppositely charged particles. It is also possible for the similarly charged ions to accelerate each other, or electrons to accelerate other electrons, but these events are not responsible for the dominant observed emission in the sun. 
+
+\paragraph{Nuclear decay}
+Nuclei can also be excited into a higher energy state through powerful collisions. When they return to a lower energy state, a photon is emitted and is typically in the gamma range of the spectrum. 
+
+\paragraph{Spectral band definitions}
+This dissertation will refer frequently to different bands of light by common names. The International Organization for Standardization (ISO) has defined specific values for these ranges, and the relevant subset of them are included in Table \ref{tab:spectraldefinitions}. 
+
+\begin{table}[!h]
+    \caption[Spectral band definitions]{
+        Selected formal spectral band definitions adapted from ISO document 21348. 
+    }
+    \begin{center}
+    \begin{tabular}{|l|c|} \hline
+	Common name & Wavelength range (\AA) \\ \hline \hline
+	Hard X-rays (HXRs) & $0.01 \leq \lambda < 1.0$ \\ \hline
+	Soft X-rays (SXRs) & $1.0 \leq \lambda < 100$  \\ \hline
+	Extreme Ultraviolet (EUV) & $100 \leq \lambda < 1210$ \\ \hline
+	Visible & $3800 \leq \lambda < 7600$ \\ \hline
+	Ultra High Frequency (UHF) & $1.00 \times 10^9 \leq \lambda < 1.00 \times 10^10$ \\ \hline
+	\end{tabular}
+    \\ \rule{0mm}{5mm}
+    \end{center}
+    \label{tab:spectraldefinitions}
+\end{table}
+
+\subsection{Thermodynamic Equilibrium} 
+A large, dynamic body such as the sun shouldn't be expected to be in thermodynamic equilibrium everywhere. The term ``local thermodynamic equilibrium (LTE)" appreciates this. There are many volumes of the sun where the laws and conveniences of thermodynamic equilibrium can be applied. LTE is a good assumption when three basic criteria are met: the electron and ion velocity distribution is Maxwellian, the plasma is only weakly ionized such that the Saha equation holds, and collisional excitation dominates radiative such that the Boltzmann equation can be applied. 
+
+The Maxwell-Boltzmann equation describes the velocity distribution of a population of particles: 
+
+\begin{equation}
+    \label{eq:maxwellboltzmann}
+    f(v) = \sqrtsign{\left(\frac{m}{2\pi k_BT} \right)^3} 4\pi v^2 e^{-\frac{mv^2}{2k_BT}}
+\end{equation}
+
+\noindent where $f$ is the probability density function, $v$ is velocity, $m$ is particle mass, $k_B$ is Boltmann's constant, and $T$ is temperature. This is a valid description for processes involving only continuum emission (free-free and free-bound) and is usually valid for atoms and ions in the sun. Particle acceleration during solar flares can push a population of electrons and ions outside of the Maxwellian distribution. The Saha equation describes the ionization state of a plasma as a function of temperature and pressure: 
+
+\begin{equation}
+    \label{eq:saha}
+    \frac{n_{i+1}n_e}{n_i} = \frac{2g_{i+1}}{\Lambda^3 g_i} e^{-\frac{\epsilon_{i+1} - \epsilon_i}{k_BT}}
+\end{equation}
+
+\noindent where $n_i$ is the number density of ions in the \textit{i-th} ionization state, $n_e$ is the number density of electrons, $\Lambda$ is the deBroglie wavelength, $g_i$ is the degeneracy of states for the i-ions, and $\epsilon_i$ is the energy to remove $i$ ions from the neutral atom. In the solar atmosphere, the low-lying atomic levels are dominated by radiative ionization while the high levels are dominated by collisional ionization when the temperature and density are high. The Saha equation is valid when collisions dominate the overall plasma or when the radiation field is Planckian (i.e. corresponds to a blackbody, see Equation \ref{eq:planck}). The Boltzmann equation (not to be confused with the Maxwell-Boltzmann equation) describes the excitation distribution of electrons in an atom: 
+
+\begin{equation}
+    \label{eq:boltzmann}
+    f(i) = \frac{e^{-\epsilon_i / k_BT}}{\sum_{i=1}^M e^{-\epsilon_i / k_BT} }
+\end{equation}
+
+\noindent where $M$ is the number of all states accessible to the system and all other terms are as defined previously. The Boltzmann equation is valid when collisions dominate excitation as compared to radiative excitation. The inherent simplifying assumption is that the excitation state depends only on the temperature and density of the plasma. This is not true in general so the assumption of LTE must be applied carefully. When LTE does hold, the distribution of thermally emitted photons is described by the Planck equation (Equation \ref{eq:planck}). Non-LTE analyses must account for the fact that the radiation field also impacts the population of electrons in atomic energy states. 
+
+Planck's equation describes blackbody emission: 
+
+\begin{equation}
+    \label{eq:planck}
+    S_\lambda = \frac{8\pi hc}{\lambda^5}\frac{1}{e^{hc/\lambda k_BT} - 1}
+\end{equation}
+
+\noindent where $S$ is the spectral radiance of a body at a particular temperature, $\lambda$ is wavelength, $h$ is Planck's constant, $c$ is the speed of light, and other terms are as previously defined. This equation can be interpreted simply as a lower temperature resulting in lower energy emission (i.e., longer wavelength) and lower intensity (see Figure \ref{fig:blackbody}).
+
+\begin{figure}[!h]
+    \begin{center}
+	    \includegraphics[width=100mm]{Images/PlankBlackBody.png}
+    \end{center}
+    \caption[Blackbody emission]{
+        Blackbody emission at several different temperatures (blue, green, and red curves). The black curve shows the 
+        Rayleigh-Jeans approximation to Plank's law and can be ignored here. Figure courtesy of 
+        \href{https://commons.wikimedia.org/wiki/File:Black_body.svg}{Darth Kule}.
+    }
+    \label{fig:blackbody}
+\end{figure} 
+
 \section{Brief Tour of the Sun}
+\label{sec:tour}
 
 \begin{figure}[!h]
     \begin{center}
@@ -44,14 +134,19 @@ The following sections will step through each layer of the sun with descriptive 
 	    \includegraphics[width=100mm]{Images/BetaVsHeight.png}
     \end{center}
     \caption[Solar plasma $\beta$ versus height]{
-        Solar plasma $\beta$ versus height from the photosphere through the corona. Figure courtesy of
-        \citet{Gary2001}.         
+        Model of solar plasma $\beta$ versus height from the photosphere through the corona in an active region. 
+        The shaded region represents the open and closed field lines originating between a sunspot of 2500 G and a plage
+        region of 150 G. (The plage curve can also represent older, decaying active regions that have no umbral 
+        features.) Various data indicate that $\beta$ approaches unity at relatively low heights in the mid-corona. 
+        Figure courtesy of \citet{Gary2001}.         
     }
     \label{fig:betavsheight}
 \end{figure}
 
 \subsection{Core}
-The gravitational pressure and density in the core of stars is sufficient to ignite nuclear fusion. In a main sequence star at the midpoint of its life, like the sun, the primary fusion reaction is the conversion of hydrogen to helium. The majority of the sun is made of hydrogen (see Figure \ref{fig:sunabundance}) -- a reflection of its relative abundance in the universe at large. Fusion in the core of stars is responsible for producing elements up to iron; the fusion process for elements heavier than iron is endothermic and thus cannot be used by the star to support itself against gravity. Instead, heavier elements are produced during supernovae. Supernovae also spread the source star's fusion products far away where they are incorporated into newly forming stars. Thus, the sun has observable metals\footnote{``metals" here is in the astrophysical sense of all elements heavier than helium} such as Fe even though it has not reached the point in its life where it produces them itself. The metals in these second and third generation stars are not confined to the core; rather, they can be found even in the corona. In subsequent sections it will become clear that having various elemental species at different stages of ionization in the directly observable solar atmosphere provides a means of determining temperature and structure. 
+The gravitational pressure and density in the core of stars is sufficient to ignite nuclear fusion. In a main sequence star at the midpoint of its life, like the sun, the primary fusion reaction is the conversion of hydrogen to helium. The majority of the sun is made of hydrogen (see Figure \ref{fig:sunabundance}) -- a reflection of its relative abundance in the universe at large. Fusion in the core of stars is responsible for producing elements up to iron; the fusion process for elements heavier than iron is endothermic and thus cannot be used by the star to support itself against gravity. Instead, heavier elements are produced during supernovae. Supernovae also spread the source star's fusion products far away where they are incorporated into newly forming stars. Thus, the sun has observable metals\footnote{``metals" here is in the astrophysical sense of all elements heavier than helium} such as Fe even though it has not reached the point in its life where it produces them itself. The metals in these second and third generation stars are not confined to the core; rather, they can be found even in the corona. In subsequent sections it will become clear that having various elemental species at different stages of ionization in the directly observable solar atmosphere provides a means of determining temperature and structure. The core itself -- in fact, everything below the photosphere -- is not directly observable. However, the field of helioseismology has developed methods for inferring many properties of the solar interior. 
+
+Helioseismology takes advantage of the fact that the roiling ``bubbles" at the photosphere are the result of mass fluid-like motion through the entire sun -- oscillations due to resonant sound waves. By measuring Doppler shifts in the light, it is possible to derive velocities of the plasma and get an indication of interior plasma properties such as hydrogen abundance in the core \citep{Gough1990}, the depth of the convection zone \citep{Christensen-Dalsgaard1991}, helium abundance in the convection zone \citep{Basu1995}, the age of the sun \citep{Guenther1989}, and more. Additionally, models of stars are critical to our understanding of the solar interior and entire textbooks have been written on the subject (e.g., \citealt{Chandrasekhar1939, Kippenhahn2012}). Further details are beyond the scope of this dissertation, so we continue our tour of the sun and turn to the radiative zone. 
 
 \begin{figure}[!h]
     \begin{center}
@@ -66,14 +161,7 @@ The gravitational pressure and density in the core of stars is sufficient to ign
 \end{figure}
 
 \subsection{Radiative Zone}
-Every nuclear reaction in the core generates high-energy photons. It takes thousands to hundreds of thousands of years for these photons to reach the photosphere because the incredible density of the solar interior results in a mean free path for photons on the order of centimeters. Because the density decreases with radial distance from the center (blue line in Figure \ref{fig:suntemperaturedensity}), there is a subtle bias in the mean free path of the photons that causes the net direction to be outward. This is the physical process that characterizes the radiative zone. Additionally, temperature decreases with distance from the center (red line in Figure \ref{fig:suntemperaturedensity}). When in thermodynamic equilibrium, as the solar interior is, atomic emission of photons obeys Planck's law, which describes blackbody emission: 
-
-\begin{equation}
-    \label{eq:planck}
-    S_\lambda = \frac{8\pi hc}{\lambda^5}\frac{1}{e^{hc/\lambda k_BT} - 1}
-\end{equation}
-
-\noindent where $S$ is the spectral radiance of a body at a particular temperature, $\lambda$ is wavelength, $h$ is Planck's constant, $c$ is the speed of light, and other terms are as previously defined. This equation can be interpreted simply as a lower temperature resulting in lower energy emission (i.e., longer wavelength). Thus, as photons move outward from the core, they are absorbed by atoms at lower temperature and reemitted at longer wavelengths. In order to conserve energy, multiple photons of lower energy must be emitted. All sunlight is essentially a modification of the light generated in the fusing core. 
+Every nuclear reaction in the core generates high-energy photons. It takes thousands to hundreds of thousands of years for these photons to reach the photosphere because the incredible density of the solar interior results in a mean free path for photons on the order of centimeters. Because the density decreases with radial distance from the center (blue line in Figure \ref{fig:suntemperaturedensity}), there is a subtle bias in the mean free path of the photons that causes the net direction to be outward. This is the physical process that characterizes the radiative zone. Additionally, temperature decreases with distance from the center (red line in Figure \ref{fig:suntemperaturedensity}). When in thermodynamic equilibrium, as the solar interior is, atomic emission of photons obeys Planck's law. Thus, as photons move outward from the core, they are absorbed by atoms at lower temperature and reemitted at longer wavelengths. In order to conserve energy, multiple photons of lower energy must be emitted. All sunlight is essentially a modification of the light generated in the fusing core. 
 
 \subsection{Convection Zone}
 
@@ -136,21 +224,6 @@ The chromosphere is an irregular layer of the sun that mostly consists of small 
     \label{fig:balmerandlyman}
 \end{figure}
 
-\subsection{Electromagnetic Radiation From Atoms and Charged Particles}
-There are three basic types of electromagnetic radiation that are emitted by electron interaction with atoms: bound-bound, free-bound, and free-free. Additionally, nuclei can emit photons. 
-
-\paragraph{Bound-bound}
-When an electron transitions from one orbital energy of an atom to a lower one, a photon is emitted with energy equal to that of the transition. Downward energy transitions can occur spontaneously or through a collisional de-excitation, where the atom impacts another particle and transfers some of its energy to the other particle. Upward energy transitions can also occur through collision or by absorption of a photon. The wavelength of the emitted photon is primarily determined by the electronic energy transition but can also be influenced by numerous other processes. For example, the strength of the surrounding magnetic field (Zeeman splitting), collisions during the energy transition, and the relative line-of-sight velocity of the atom with respect to the observer (Doppler) all influence the final wavelength of a photon emitted from a bound-bound transition. These and other effects result in line broadening, sometimes to the point of splitting the lines. 
-
-\paragraph{Free-bound}
-Also known as radiative recombination, free-bound transitions are those where an atom captures a free electron. When a free electron is captured, a photon is emitted with energy equal to the difference between the kinetic energy of the free electron and the energy of the bound atomic state. The orbitals of the atom have discrete (quantized) energy values but the kinetic energy of free electrons exists on a continuum. Thus light from free-bound transitions is also a continuum in wavelength though it has a lower limit defined by the energy of the bound state it is captured into. The reverse process (bound-free) is ionization and occurs when a photon is absorbed by an atom and an electron is liberated. 
-
-\paragraph{Free-free}
-Also known as Bremsstrahlung (``braking radiation"), any accelerating charged particle emits photons according to Maxwell's equations. The resultant emission is on a continuum because there are no quantum constraints on the kinetic energy of free particles before or after an acceleration event. Because electrons are much less massive than nuclei, they tend to experience many changes in direction and speed in a dynamic plasma. Even the lightest nucleus -- hydrogen, which is just a proton -- is 1836 times heavier than an electron. So, while the nucleus will also experience a change in kinetic energy, it is negligible compared to the electron's. The acceleration in this case is mediated through the powerful electromagnetic force between these oppositely charged particles. It is also possible for the similarly charged ions to accelerate each other, or electrons to accelerate other electrons, but these events are not responsible for the dominant observed emission. 
-
-\paragraph{Nuclear decay}
-Nuclei can also be excited into a higher energy state through powerful collisions. When they return to a lower energy state, a photon is emitted and is typically in the gamma range of the spectrum. 
-
 \subsection{Transition Region}
 The transition region is defined by the rapid increase in temperature between the chromosphere and corona (see Figure \ref{fig:suntemperaturedensity}). It is only $\sim$100 km thick and is ill defined spatially. Is it in the spicules of the chromosphere? In the loops of active regions? Its location is not obvious and its existence seems to defy the laws of thermodynamics. The early discovery of how hot the corona was and that the transition region existed was controversial. It depended on temperature-sensitive observations, which have now become routine and widely accepted. 
 
@@ -194,32 +267,6 @@ There are several means by which temperature of the solar atmosphere can be infe
 The next most common method for temperature determination uses the ratio of two emission lines. The flux in each line is dependent on the energy of the bound-bound transition, $\Delta E$, and the collision rates for that transition. The ratio of the line fluxes is temperature sensitive if $\Delta E > k_BT$. This method can handle non-isothermal plasmas by integrating the collision rates over volume. This method fails if the lines used have source regions that are distant from each other so care must be taken when the source plasma contains spatial variations in density and temperature, as is the case with the sun. Additionally, this method depends on the relative ion abundances, so if ionization balance varies with time, that time variation must be taken into account. Line ratios are not used for temperature determination in this dissertation. 
 
 The mechanism responsible for the rapid temperature change through the transition region remains poorly understood and is one of the biggest problems in solar physics. Theories abound to explain it but are beyond the scope of this dissertation. Here, we simply accept that the transition region \textit{does} lead to a much hotter corona, an observational fact that has long been established. 
-
-\subsection{Thermodynamic Equilibrium} 
-A large, dynamic body such as the sun shouldn't be expected to be in thermodynamic equilibrium everywhere. The term ``local thermodynamic equilibrium (LTE)" appreciates this. There are many volumes of the sun where the laws and conveniences of thermodynamic equilibrium can be applied. LTE is a good assumption when three basic criteria are met: the electron and ion velocity distribution is Maxwellian, the plasma is only weakly ionized such that the Saha equation holds, and collisional excitation dominates radiative such that the Boltzmann equation can be applied. 
-
-The Maxwell-Boltzmann equation describes the velocity distribution of a population of particles: 
-
-\begin{equation}
-    \label{eq:maxwellboltzmann}
-    f(v) = \sqrtsign{\left(\frac{m}{2\pi k_BT} \right)^3} 4\pi v^2 e^{-\frac{mv^2}{2k_BT}}
-\end{equation}
-
-\noindent where $f$ is the probability density function, $v$ is velocity, $m$ is particle mass, and other terms are as previously defined. This is a valid description for processes involving only continuum emission (free-free and free-bound) and is usually valid for atoms and ions in the sun. Particle acceleration during solar flares can push a population of electrons and ions outside of the Maxwellian distribution. The Saha equation describes the ionization state of a plasma as a function of temperature and pressure: 
-
-\begin{equation}
-    \label{eq:saha}
-    \frac{n_{i+1}n_e}{n_i} = \frac{2g_{i+1}}{\Lambda^3 g_i} e^{-\frac{\epsilon_{i+1} - \epsilon_i}{k_BT}}
-\end{equation}
-
-\noindent where $n_i$ is the number density of ions in the $i-th$ ionization state, $n_e$ is the number density of electrons, $\Lambda$ is the deBroglie wavelength, $g_i$ is the degeneracy of states for the i-ions, and $\epsilon_i$ is the energy to remove $i$ ions from the neutral atom. In the solar atmosphere, the low-lying atomic levels are dominated by radiative ionization while the high levels are dominated by collisional ionization when the temperature and density are high. The Saha equation is valid when collisions dominate the overall plasma or when the radiation field is Planckian (Equation \ref{eq:planck}). The Boltzmann equation (not to be confused with the Maxwell-Boltzmann equation) describes the excitation distribution of electrons in an atom: 
-
-\begin{equation}
-    \label{eq:boltzmann}
-    f(i) = \frac{e^{-\epsilon_i / k_BT}}{\sum_{i=1}^M e^{-\epsilon_i / k_BT} }
-\end{equation}
-
-\noindent where $M$ is the number of all states accessible to the system and all other terms are as defined previously. The Boltzmann equation is valid when collisions dominate excitation as compared to radiative excitation. The inherent simplifying assumption is that the excitation state depends only on the temperature and density of the plasma. This is not true in general so the assumption of LTE must be applied carefully. When LTE does hold, the distribution of thermally emitted photons is described by the Planck equation (Equation \ref{eq:planck}). Non-LTE analyses must account for the fact that the radiation field also impacts the population of electrons in atomic energy states. 
 
 \subsection{Corona}
 
@@ -350,7 +397,7 @@ The Extreme Ultraviolet (EUV) Variability Experiment (EVE; \citealt{Woods2012}) 
 The modified Amptek X123 silicon drift detector onboard MinXSS is a spectrometer to observe SXRs. It will be described in Chapter \ref{chapterminxssoverview}. 
 
 \subsection{Spectral Imagers}
-Also onboard SDO is the Atmospheric Imaging Assembly (AIA; \citealt{Lemen2012}). AIA consists of seven EUV channels from four telescopes. The full solar disk is observed and the light is imaged onto 4096 x 4096 CCDs every 12 seconds. The spatial resolution of 1.5 arcsec translates to about 1000 km at the sun. AIA uses filters to select bandpasses, most of which are in the EUV and complement EVE data. The filters have bandpasses that are several nanometers wide, which results in spectral line blending. Spectral-line blends in this case result in degeneracy in temperature space. For example, if a pixel in the 171 \AA\ bandpass becomes bright, it is not known if that is due to an enhancement in Fe IX or Fe X. The sharpness of the 171 \AA\ bandpass helps mitigate this issue, but as can be seen in Figure \ref{fig:aiabandpasses}, some of the bandpasses cover a wide range of wavelengths, which can make temperature diagnostics difficult. Fortunately, analyses can leverage AIA and EVE data together to gain an improved understanding of solar plasma in terms of space, time, and temperature. 
+Also onboard SDO is the Atmospheric Imaging Assembly (AIA; \citealt{Lemen2012}). AIA consists of seven EUV channels from four telescopes. The full solar disk is observed and the light is imaged onto 4096 x 4096 CCDs every 12 seconds. The spatial resolution of 1.5 arcsec translates to about 1000 km at the sun. AIA uses filters to select bandpasses, most of which are in the EUV and complement EVE data. The filters have bandpasses that are several nanometers wide, which results in spectral line blending. Spectral-line blends in this case result in degeneracy in temperature space. For example, if a pixel in the 171 \AA\ bandpass becomes bright, it is not known if that is due to an enhancement in Fe IX or Fe X. The sharpness of the 171 \AA\ bandpass helps mitigate this issue, but as can be seen in Figure \ref{fig:aiabandpasses}, some of the bandpasses cover a wide range of wavelengths, which can make temperature diagnostics difficult. Fortunately, analyses can leverage AIA and EVE data together to gain an improved understanding of solar plasma in terms of space, time, and temperature. The spectral images of coronal dimming used in this dissertation are from the AIA instrument. 
 
 \begin{figure}[!h]
     \begin{center}
@@ -358,7 +405,8 @@ Also onboard SDO is the Atmospheric Imaging Assembly (AIA; \citealt{Lemen2012}).
     \end{center}
     \caption[AIA bandpasses]{
 	    The AIA bandpasses with an example EVE solar spectrum to provide an idea of the amount of blending. 
-	    Some emission lines are labeled with their corresponding ion. 
+	    Some emission lines are labeled with their corresponding ion. The cooler corona lines, such as Fe IX through 
+	    Fe XII, are the better ones for coronal dimming analysis. 
 	}
     \label{fig:aiabandpasses}
 \end{figure}
